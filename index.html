@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="bn">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMIR HOSSAIN MAHIM | ডেটা অ্যানালিস্ট পোর্টফোলিও</title>
+    <title>SAMIR HOSSAIN MAHIM | Data Analyst Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --secondary-color: #7c3aed;
-            --accent-color: #0ea5e9;
-            --dark-bg: #0f172a;
-            --dark-secondary: #1e293b;
-            --dark-tertiary: #334155;
-            --light-bg: #f8fafc;
+            --primary-color: #00ffcc;
+            --secondary-color: #ff00ff;
+            --accent-color: #00aaff;
+            --dark-bg: #0a0a0a;
+            --dark-secondary: #121212;
+            --dark-tertiary: #1a1a1a;
+            --light-bg: #f5f5f5;
             --light-secondary: #ffffff;
-            --light-tertiary: #e2e8f0;
-            --text-dark: #f1f5f9;
-            --text-light: #1e293b;
-            --success-color: #10b981;
-            --code-bg: rgba(37, 99, 235, 0.1);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --light-tertiary: #e0e0e0;
+            --text-dark: #e0e0e0;
+            --text-light: #121212;
+            --terminal-green: #00ff00;
+            --code-bg: rgba(0, 255, 204, 0.1);
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -40,12 +30,11 @@
         }
 
         body {
-            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            font-family: 'Courier New', monospace;
             background-color: var(--dark-bg);
             color: var(--text-dark);
             overflow-x: hidden;
             transition: var(--transition);
-            line-height: 1.6;
         }
 
         body.light-mode {
@@ -64,16 +53,16 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 18px 0;
-            background: rgba(15, 23, 42, 0.95);
+            padding: 15px 0;
+            background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(10px);
             z-index: 1000;
             transition: var(--transition);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         body.light-mode header {
-            background: rgba(248, 250, 252, 0.95);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -84,7 +73,7 @@
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: bold;
             color: var(--primary-color);
             text-decoration: none;
             display: flex;
@@ -93,7 +82,6 @@
 
         .logo i {
             margin-right: 10px;
-            font-size: 1.8rem;
         }
 
         .nav-links {
@@ -102,8 +90,7 @@
         }
 
         .nav-links li {
-            margin-left: 30px;
-            position: relative;
+            margin-left: 25px;
         }
 
         .nav-links a {
@@ -112,7 +99,6 @@
             position: relative;
             transition: var(--transition);
             font-weight: 500;
-            font-size: 1rem;
         }
 
         body.light-mode .nav-links a {
@@ -138,57 +124,17 @@
             width: 100%;
         }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .language-toggle {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--dark-tertiary);
-            padding: 8px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        body.light-mode .language-toggle {
-            background: var(--light-tertiary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .language-toggle:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .language-toggle span {
-            font-weight: 500;
-        }
-
         .theme-toggle {
             background: none;
             border: none;
             color: var(--primary-color);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: var(--transition);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(37, 99, 235, 0.1);
         }
 
         .theme-toggle:hover {
-            background: rgba(37, 99, 235, 0.2);
-            transform: rotate(15deg);
+            transform: rotate(180deg);
         }
 
         /* Hero Section */
@@ -199,97 +145,106 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px;
         }
 
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
-            z-index: 1;
+        .terminal {
+            background-color: rgba(20, 20, 20, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+            border: 1px solid var(--primary-color);
+            position: relative;
+            z-index: 2;
         }
 
-        body.light-mode .hero-bg {
-            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(226, 232, 240, 0.9) 100%);
+        body.light-mode .terminal {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
         }
 
-        .hero-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 20%);
-            z-index: 0;
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .red-button {
+            background-color: #ff5f56;
+        }
+
+        .yellow-button {
+            background-color: #ffbd2e;
+        }
+
+        .green-button {
+            background-color: #27c93f;
+        }
+
+        .terminal-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .terminal-content {
+            font-family: 'Courier New', monospace;
+        }
+
+        .typing-text {
+            overflow: hidden;
+            border-right: 2px solid var(--primary-color);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary-color) }
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
             text-align: center;
-            max-width: 900px;
-            padding: 40px;
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: var(--shadow);
+            margin-top: 20px;
         }
 
-        body.light-mode .hero-content {
-            background: rgba(248, 250, 252, 0.8);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             color: var(--text-dark);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        body.light-mode .hero p {
+        body.light-mode .hero-content p {
             color: var(--text-light);
         }
 
@@ -297,51 +252,78 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
         .btn {
-            padding: 15px 35px;
+            padding: 12px 25px;
             border: 2px solid var(--primary-color);
-            background-color: var(--primary-color);
-            color: white;
+            background-color: transparent;
+            color: var(--primary-color);
             cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
             text-decoration: none;
             display: inline-block;
             position: relative;
             overflow: hidden;
             transition: var(--transition);
             z-index: 1;
-            border-radius: 10px;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            transform: translateX(0);
         }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--primary-color);
         }
 
         .btn-outline {
-            background-color: transparent;
-            color: var(--primary-color);
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline::before {
+            background-color: var(--secondary-color);
         }
 
         .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--secondary-color);
+        }
+
+        /* Matrix Rain Effect */
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.3;
+            pointer-events: none;
         }
 
         /* About Section */
         .about {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: var(--dark-secondary);
             position: relative;
-            overflow: hidden;
         }
 
         body.light-mode .about {
@@ -350,44 +332,29 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 60px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
             position: relative;
             display: inline-block;
             width: 100%;
-            font-weight: 700;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
+            width: 100px;
+            height: 3px;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
         }
 
         .about-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 60px;
-            animation: fadeUp 1s ease-out;
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            gap: 50px;
         }
 
         .about-text {
@@ -395,51 +362,29 @@
         }
 
         .about-text p {
-            margin-bottom: 25px;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
-        .highlight {
-            color: var(--primary-color);
-            font-weight: 600;
+        .code-block {
+            background-color: var(--code-bg);
+            border-left: 3px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 15px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            transition: var(--transition);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            background: rgba(37, 99, 235, 0.2);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .stat-text {
-            font-size: 1rem;
-            color: var(--text-dark);
-        }
-
-        body.light-mode .stat-text {
-            color: var(--text-light);
+        .code-block::before {
+            content: 'CODE';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+            padding: 2px 10px;
+            font-size: 0.7rem;
         }
 
         .about-image {
@@ -449,118 +394,69 @@
 
         .profile-card {
             background-color: var(--dark-tertiary);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 10px;
+            padding: 30px;
             text-align: center;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+            border: 1px solid var(--primary-color);
             position: relative;
             overflow: hidden;
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 0.5s;
         }
 
         body.light-mode .profile-card {
             background-color: var(--light-tertiary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin: 0 auto 25px;
-            border: 5px solid var(--primary-color);
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary-color);
             background-color: var(--dark-bg);
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(37, 99, 235, 0.3), transparent);
-            animation: shine 3s ease-in-out infinite;
-        }
-
-        @keyframes shine {
-
-            0%,
-            100% {
-                transform: translateX(-100%);
-            }
-
-            50% {
-                transform: translateX(100%);
-            }
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            position: relative;
-            z-index: 1;
+            font-size: 4rem;
+            color: var(--primary-color);
         }
 
         .profile-info h3 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 10px;
             color: var(--primary-color);
-            font-weight: 700;
         }
 
         .profile-info p {
-            margin-bottom: 20px;
-            color: var(--text-dark);
+            margin-bottom: 15px;
         }
 
-        body.light-mode .profile-info p {
-            color: var(--text-light);
-        }
-
-        .social-links {
+        .profile-info .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .social-links a {
-            width: 50px;
-            height: 50px;
-            background: var(--dark-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: var(--text-dark);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: var(--transition);
-            border: 2px solid transparent;
         }
 
         body.light-mode .social-links a {
-            background: var(--light-bg);
             color: var(--text-light);
         }
 
         .social-links a:hover {
-            background: var(--primary-color);
-            color: white;
+            color: var(--primary-color);
             transform: translateY(-5px);
-            border-color: var(--primary-color);
         }
 
         /* Skills Section */
         .skills {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: var(--dark-bg);
         }
 
@@ -576,19 +472,18 @@
 
         .skill-card {
             background-color: var(--dark-secondary);
-            border-radius: 15px;
-            padding: 35px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+            border: 1px solid var(--primary-color);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            animation: fadeUp 1s ease-out;
         }
 
         body.light-mode .skill-card {
             background-color: var(--light-secondary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
         }
 
         .skill-card::before {
@@ -603,35 +498,29 @@
 
         .skill-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
         }
 
         .skill-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .skill-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--primary-color);
-            font-weight: 600;
         }
 
         .skill-description {
-            margin-bottom: 25px;
-            color: var(--text-dark);
-        }
-
-        body.light-mode .skill-description {
-            color: var(--text-light);
+            margin-bottom: 20px;
         }
 
         .skill-progress {
-            height: 12px;
+            height: 10px;
             background-color: var(--dark-tertiary);
-            border-radius: 6px;
+            border-radius: 5px;
             overflow: hidden;
             position: relative;
         }
@@ -643,29 +532,15 @@
         .skill-progress-bar {
             height: 100%;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 6px;
+            border-radius: 5px;
             width: 0;
-            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-progress-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shine 2s ease-in-out infinite;
+            transition: width 1.5s ease;
         }
 
         /* Projects Section */
         .projects {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: var(--dark-secondary);
-            position: relative;
         }
 
         body.light-mode .projects {
@@ -675,95 +550,76 @@
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            gap: 30px;
         }
 
         .project-card {
             background-color: var(--dark-tertiary);
-            border-radius: 20px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+            border: 1px solid var(--primary-color);
             transition: var(--transition);
             position: relative;
-            animation: fadeUp 1s ease-out;
         }
 
         body.light-mode .project-card {
             background-color: var(--light-tertiary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
         }
 
         .project-img {
-            height: 220px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 200px;
+            background-color: var(--dark-bg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            font-size: 3rem;
+            color: var(--primary-color);
         }
 
-        .project-img i {
-            z-index: 1;
-        }
-
-        .project-img::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shine 3s ease-in-out infinite;
+        body.light-mode .project-img {
+            background-color: var(--light-bg);
         }
 
         .project-content {
-            padding: 30px;
+            padding: 25px;
         }
 
         .project-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--primary-color);
-            font-weight: 600;
         }
 
         .project-description {
-            margin-bottom: 25px;
-            color: var(--text-dark);
-        }
-
-        body.light-mode .project-description {
-            color: var(--text-light);
+            margin-bottom: 20px;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .tag {
             background-color: var(--code-bg);
             color: var(--primary-color);
-            padding: 8px 16px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(37, 99, 235, 0.3);
+            font-size: 0.8rem;
+            border: 1px solid var(--primary-color);
         }
 
         .project-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         .project-link {
@@ -771,9 +627,8 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
             transition: var(--transition);
-            font-weight: 500;
         }
 
         body.light-mode .project-link {
@@ -782,14 +637,12 @@
 
         .project-link:hover {
             color: var(--primary-color);
-            transform: translateY(-3px);
         }
 
         /* Experience Section */
         .experience {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: var(--dark-bg);
-            position: relative;
         }
 
         body.light-mode .experience {
@@ -800,19 +653,17 @@
             position: relative;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 0;
         }
 
-        .timeline::before {
+        .timeline::after {
             content: '';
             position: absolute;
-            width: 3px;
-            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            width: 2px;
+            background-color: var(--primary-color);
             top: 0;
             bottom: 0;
             left: 50%;
-            margin-left: -1.5px;
-            border-radius: 3px;
+            margin-left: -1px;
         }
 
         .timeline-item {
@@ -820,32 +671,23 @@
             position: relative;
             background-color: inherit;
             width: 50%;
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .timeline-item.animated {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 25px;
-            height: 25px;
-            background: var(--primary-color);
-            border: 5px solid var(--dark-bg);
-            top: 20px;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--primary-color);
+            border: 4px solid var(--dark-bg);
+            top: 15px;
             border-radius: 50%;
             z-index: 1;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
         }
 
         body.light-mode .timeline-item::after {
-            border: 5px solid var(--light-bg);
+            border: 4px solid var(--light-bg);
         }
 
         .left {
@@ -856,52 +698,64 @@
             left: 50%;
         }
 
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--primary-color);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--primary-color) transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
         .timeline-content {
-            padding: 25px 30px;
+            padding: 20px 30px;
             background-color: var(--dark-secondary);
             position: relative;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            border-radius: 6px;
+            border: 1px solid var(--primary-color);
         }
 
         body.light-mode .timeline-content {
             background-color: var(--light-secondary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-content:hover {
-            transform: translateX(10px);
-        }
-
-        .right .timeline-content:hover {
-            transform: translateX(-10px);
         }
 
         .timeline-content h3 {
             color: var(--primary-color);
             margin-bottom: 10px;
-            font-size: 1.4rem;
-            font-weight: 600;
         }
 
         .timeline-content .date {
             display: inline-block;
             color: var(--secondary-color);
             margin-bottom: 15px;
-            font-size: 1rem;
-            font-weight: 500;
-            background: rgba(124, 58, 237, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
         .contact {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: var(--dark-secondary);
-            position: relative;
         }
 
         body.light-mode .contact {
@@ -910,7 +764,7 @@
 
         .contact-container {
             display: flex;
-            gap: 60px;
+            gap: 50px;
         }
 
         .contact-info {
@@ -920,130 +774,98 @@
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 40px;
-            padding: 25px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 15px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            transition: var(--transition);
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-            background: rgba(37, 99, 235, 0.2);
+            margin-bottom: 30px;
         }
 
         .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            width: 50px;
+            height: 50px;
+            background-color: var(--code-bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 25px;
-            color: white;
-            font-size: 1.5rem;
-            flex-shrink: 0;
+            margin-right: 20px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
         }
 
         .contact-text h4 {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             color: var(--primary-color);
-            font-size: 1.3rem;
-            font-weight: 600;
         }
 
         .contact-form {
             flex: 1;
-            background: var(--dark-tertiary);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        body.light-mode .contact-form {
-            background: var(--light-tertiary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: var(--primary-color);
-            font-weight: 500;
-            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 18px;
-            background-color: var(--dark-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            padding: 15px;
+            background-color: var(--dark-tertiary);
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
             color: var(--text-dark);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Courier New', monospace;
             transition: var(--transition);
-            font-size: 1rem;
         }
 
         body.light-mode .form-group input,
         body.light-mode .form-group textarea {
-            background-color: var(--light-bg);
+            background-color: var(--light-tertiary);
             color: var(--text-light);
-            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 180px;
+            min-height: 150px;
         }
 
         .submit-btn {
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            color: var(--dark-bg);
             border: none;
-            padding: 18px 40px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
+            padding: 15px 30px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 5px;
             transition: var(--transition);
             display: inline-block;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-            width: 100%;
         }
 
         .submit-btn:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+            transform: translateY(-3px);
         }
 
         /* Footer */
         footer {
-            padding: 60px 0 40px;
+            padding: 30px 0;
             background-color: var(--dark-bg);
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--primary-color);
         }
 
         body.light-mode footer {
             background-color: var(--light-bg);
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .footer-content {
@@ -1053,46 +875,36 @@
         }
 
         .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: var(--primary-color);
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .footer-social {
             display: flex;
-            gap: 25px;
-            margin-bottom: 30px;
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .footer-social a {
-            width: 55px;
-            height: 55px;
-            background: var(--dark-secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: var(--text-dark);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             transition: var(--transition);
         }
 
         body.light-mode .footer-social a {
-            background: var(--light-secondary);
             color: var(--text-light);
         }
 
         .footer-social a:hover {
-            background: var(--primary-color);
-            color: white;
+            color: var(--primary-color);
             transform: translateY(-5px);
         }
 
         .copyright {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-dark);
-            margin-top: 20px;
         }
 
         body.light-mode .copyright {
@@ -1103,41 +915,15 @@
         .hamburger {
             display: none;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
-            flex-direction: column;
-            justify-content: space-around;
         }
 
         .hamburger span {
             display: block;
-            width: 100%;
+            width: 25px;
             height: 3px;
             background-color: var(--primary-color);
+            margin: 5px 0;
             transition: var(--transition);
-            border-radius: 3px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-
-        @media (max-width: 1200px) {
-            .container {
-                padding: 0 40px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
         }
 
         @media (max-width: 992px) {
@@ -1149,48 +935,49 @@
                 flex-direction: column;
             }
 
-            .timeline::before {
+            .timeline::after {
                 left: 31px;
             }
 
             .timeline-item {
                 width: 100%;
-                padding-left: 80px;
+                padding-left: 70px;
                 padding-right: 25px;
             }
 
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid var(--primary-color);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--primary-color) transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 21px;
+            }
+
             .right {
-                left: 0;
-            }
-
-            .timeline-item::after {
-                left: 55px;
-            }
-
-            .right .timeline-content:hover {
-                transform: translateX(10px);
+                left: 0%;
             }
         }
 
         @media (max-width: 768px) {
             .hamburger {
-                display: flex;
-                z-index: 1001;
+                display: block;
             }
 
             .nav-links {
                 position: fixed;
                 left: -100%;
-                top: 0;
+                top: 70px;
                 flex-direction: column;
                 background-color: var(--dark-secondary);
                 width: 100%;
-                height: 100vh;
                 text-align: center;
-                transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                padding-top: 100px;
-                z-index: 1000;
-                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+                z-index: 999;
             }
 
             body.light-mode .nav-links {
@@ -1202,30 +989,20 @@
             }
 
             .nav-links li {
-                margin: 20px 0;
+                margin: 15px 0;
             }
 
-            .nav-links a {
-                font-size: 1.3rem;
+            .hero-content h1 {
+                font-size: 2rem;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
+            .hero-content p {
+                font-size: 1rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
                 gap: 15px;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
             }
 
             .projects-container {
@@ -1235,110 +1012,47 @@
             .skills-container {
                 grid-template-columns: 1fr;
             }
-
-            .hero-content {
-                padding: 30px 20px;
-            }
-
-            .section-title {
-                font-size: 2.3rem;
-            }
         }
 
         @media (max-width: 576px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
+            .hero-content h1 {
+                font-size: 1.5rem;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
-            .stats {
-                grid-template-columns: 1fr;
+            .terminal {
+                width: 95%;
             }
-
-            .nav-right {
-                gap: 15px;
-            }
-
-            .language-toggle span {
-                display: none;
-            }
-
-            .language-toggle {
-                padding: 8px;
-            }
-        }
-
-        /* Language Specific Styles */
-        .bn {
-            font-family: 'Hind Siliguri', sans-serif;
-        }
-
-        .en {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .language-badge {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            z-index: 999;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .language-badge:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
         }
     </style>
 </head>
-
-<body class="bn">
+<body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <a href="#home" class="logo">
-                    <i class="fas fa-chart-line"></i>
-                    <span>সামির হোসেন মাহিম</span>
+                <a href="#" class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>SAMIR HOSSAIN MAHIM</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">হোম</a></li>
-                    <li><a href="#about" class="nav-link">পরিচিতি</a></li>
-                    <li><a href="#skills" class="nav-link">দক্ষতা</a></li>
-                    <li><a href="#projects" class="nav-link">প্রকল্প</a></li>
-                    <li><a href="#experience" class="nav-link">অভিজ্ঞতা</a></li>
-                    <li><a href="#contact" class="nav-link">যোগাযোগ</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="nav-right">
-                    <div class="language-toggle" id="languageToggle">
-                        <span class="bn">English</span>
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon" id="themeIcon"></i>
-                    </div>
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
@@ -1346,19 +1060,28 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-pattern"></div>
+        <canvas class="matrix-rain" id="matrix-rain"></canvas>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i> ডেটা অ্যানালিস্ট
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button red-button"></div>
+                        <div class="terminal-button yellow-button"></div>
+                        <div class="terminal-button green-button"></div>
+                    </div>
+                    <div class="terminal-title">samir@portfolio:~</div>
                 </div>
-                <h1 id="heroTitle">সামির হোসেন মাহিম</h1>
-                <p id="heroSubtitle">ডেটা বিশ্লেষণ করে সুযোগ তৈরি করি। পাইথন, এসকিউএল, এবং মেশিন লার্নিং ব্যবহার করে
-                    জটিল ডেটাকে বোধগম্য অন্তর্দৃষ্টিতে রূপান্তর করি।</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn" id="projectsBtn">প্রকল্প দেখুন</a>
-                    <a href="#contact" class="btn btn-outline" id="contactBtn">যোগাযোগ করুন</a>
+                <div class="terminal-content">
+                    <div class="typing-text">$ cat profile.txt</div>
+                    <div class="hero-content">
+                        <h1>SAMIR HOSSAIN MAHIM</h1>
+                        <p>Data Analyst | Python | SQL | Machine Learning</p>
+                        <p>Transforming raw data into actionable insights</p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn">View Projects</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1367,46 +1090,31 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" id="aboutTitle">পরিচিতি</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>আসসালামু আলাইকুম! আমি <span class="highlight">সামির হোসেন মাহিম</span>, একজন আগ্রহী ডেটা
-                        অ্যানালিস্ট। পরিসংখ্যানগত বিশ্লেষণ, ডেটা ভিজ্যুয়ালাইজেশন, এবং মেশিন লার্নিং-এ আমার দক্ষতা
-                        রয়েছে। আমি জটিল ডেটাসেট থেকে অর্থপূর্ণ তথ্য উদ্ধার করে ব্যবসায়িক সিদ্ধান্ত গ্রহণে সহায়তা করি।
-                    </p>
-
-                    <p>আমার কাজের পদ্ধতিতে প্রযুক্তিগত দক্ষতা এবং ব্যবসায়িক বোধের সমন্বয় ঘটে, যা ডেটা সায়েন্স এবং
-                        বাস্তব প্রয়োগের মধ্যে সেতুবন্ধন তৈরি করে। প্রেডিক্টিভ মডেল তৈরি, ইন্টারেক্টিভ ড্যাশবোর্ড
-                        ডিজাইন, বা গভীর পরিসংখ্যানগত বিশ্লেষণ - যেকোনো চ্যালেঞ্জ গ্রহণে আমি সবসময় উৎসাহী।</p>
-
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-text">প্রকল্প সম্পন্ন</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-text">বছরের অভিজ্ঞতা</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-text">ক্লায়েন্ট সন্তুষ্টি</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">95%</div>
-                            <div class="stat-text">ডেটা নির্ভুলতা</div>
-                        </div>
+                    <p>Hello! I'm SAMIR HOSSAIN MAHIM, a passionate Data Analyst with a keen eye for detail and a love for uncovering insights hidden in data. With a strong background in statistical analysis, data visualization, and machine learning, I transform complex datasets into meaningful stories that drive business decisions.</p>
+                    
+                    <div class="code-block">
+                        <pre>const dataAnalyst = {
+  name: "SAMIR HOSSAIN MAHIM",
+  skills: ["Python", "SQL", "Machine Learning", "Data Visualization"],
+  passion: "Turning data into insights",
+  contact: "samir47573@gmail.com"
+};</pre>
                     </div>
+                    
+                    <p>My approach combines technical expertise with business acumen, allowing me to bridge the gap between data science and practical applications. Whether it's building predictive models, creating interactive dashboards, or performing deep statistical analysis, I'm always excited to tackle new challenges and deliver data-driven solutions.</p>
                 </div>
                 <div class="about-image">
                     <div class="profile-card">
                         <div class="profile-img">
-                            <img src="images/samir_photo.png" alt="Profile">
+                            <i class="fas fa-user"></i>
                         </div>
                         <div class="profile-info">
-                            <h3>সামির হোসেন মাহিম</h3>
-                            <p>ডেটা অ্যানালিস্ট</p>
-                            <p>চট্টগ্রাম, বাংলাদেশ</p>
+                            <h3>SAMIR HOSSAIN MAHIM</h3>
+                            <p>Data Analyst</p>
+                            <p>Chattogram, Bangladesh</p>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
                                 <a href="#"><i class="fab fa-github"></i></a>
@@ -1423,75 +1131,69 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" id="skillsTitle">প্রযুক্তিগত দক্ষতা</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="skill-title">ডেটা বিশ্লেষণ</h3>
-                    <p class="skill-description">জটিল ডেটাসেট থেকে তথ্য আহরণ, পরিষ্কারকরণ এবং বিশ্লেষণ করে ট্রেন্ড ও
-                        প্যাটার্ন শনাক্তকরণে দক্ষ।</p>
+                    <h3 class="skill-title">Data Analysis</h3>
+                    <p class="skill-description">Proficient in extracting, cleaning, and analyzing complex datasets to identify trends and patterns.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="90"></div>
                     </div>
                 </div>
-
+                
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-python"></i>
                     </div>
-                    <h3 class="skill-title">পাইথন</h3>
-                    <p class="skill-description">পান্ডাস, নামপাই, ম্যাটপ্লটলিব, এবং স্কিকিট-লার্ন সহ পাইথন লাইব্রেরিতে
-                        উন্নত জ্ঞান।</p>
+                    <h3 class="skill-title">Python</h3>
+                    <p class="skill-description">Advanced knowledge of Python libraries including Pandas, NumPy, Matplotlib, and Scikit-learn.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="85"></div>
                     </div>
                 </div>
-
+                
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3 class="skill-title">ডেটা ভিজ্যুয়ালাইজেশন</h3>
-                    <p class="skill-description">টেবলু, পাওয়ার বিআই, এবং পাইথন লাইব্রেরি ব্যবহার করে ডেটার আকর্ষণীয়
-                        ভিজ্যুয়াল উপস্থাপনা তৈরি।</p>
+                    <h3 class="skill-title">Data Visualization</h3>
+                    <p class="skill-description">Creating compelling visual representations of data using Tableau, Power BI, and Python libraries.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="80"></div>
                     </div>
                 </div>
-
+                
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="skill-title">মেশিন লার্নিং</h3>
-                    <p class="skill-description">সুপারভাইজড এবং আনসুপারভাইজড লার্নিং অ্যালগরিদম ব্যবহার করে প্রেডিক্টিভ
-                        মডেলিং অভিজ্ঞতা।</p>
+                    <h3 class="skill-title">Machine Learning</h3>
+                    <p class="skill-description">Experience with supervised and unsupervised learning algorithms for predictive modeling.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="75"></div>
                     </div>
                 </div>
-
+                
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="skill-title">এসকিউএল</h3>
-                    <p class="skill-description">ডেটা এক্সট্রাকশন, ম্যানিপুলেশন এবং ডেটাবেস ম্যানেজমেন্টের জন্য
-                        এসকিউএলের শক্তিশালী জ্ঞান।</p>
+                    <h3 class="skill-title">SQL</h3>
+                    <p class="skill-description">Strong command of SQL for data extraction, manipulation, and database management.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="85"></div>
                     </div>
                 </div>
-
+                
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="skill-title">পরিসংখ্যানগত বিশ্লেষণ</h3>
-                    <p class="skill-description">পরিসংখ্যানগত ধারণা এবং বাস্তব-বিশ্বের ডেটা সমস্যায় তাদের প্রয়োগের
-                        গভীর বোধগম্যতা।</p>
+                    <h3 class="skill-title">Statistical Analysis</h3>
+                    <p class="skill-description">Deep understanding of statistical concepts and their application to real-world data problems.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="80"></div>
                     </div>
@@ -1503,77 +1205,72 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title" id="projectsTitle">প্রকল্পসমূহ</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-chart-pie"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project1Title">বিক্রয় পূর্বাভাস মডেল</h3>
-                        <p class="project-description" id="project1Desc">ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের
-                            বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২%
-                            নির্ভুলতা অর্জন করা হয়েছে।</p>
+                        <h3 class="project-title">Sales Forecasting Model</h3>
+                        <p class="project-description">Developed a machine learning model to predict future sales based on historical data, achieving 92% accuracy.</p>
                         <div class="project-tags">
-                            <span class="tag">পাইথন</span>
-                            <span class="tag">মেশিন লার্নিং</span>
-                            <span class="tag">টাইম সিরিজ</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Time Series</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code1">কোড</span>
+                                <i class="fab fa-github"></i> Code
                             </a>
                             <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo1">লাইভ ডেমো</span>
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project2Title">গ্রাহক সেগমেন্টেশন বিশ্লেষণ</h3>
-                        <p class="project-description" id="project2Desc">ক্রয় আচরণের ভিত্তিতে গ্রাহকদের সেগমেন্ট করার
-                            জন্য ক্লাস্টারিং অ্যালগরিদম বাস্তবায়ন করা হয়েছে, যা বিপণন রিটার্নে ৩৫% উন্নতি করেছে।</p>
+                        <h3 class="project-title">Customer Segmentation Analysis</h3>
+                        <p class="project-description">Implemented clustering algorithms to segment customers based on purchasing behavior, improving marketing ROI by 35%.</p>
                         <div class="project-tags">
-                            <span class="tag">পাইথন</span>
-                            <span class="tag">ক্লাস্টারিং</span>
-                            <span class="tag">ডেটা ভিজ্যুয়ালাইজেশন</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Clustering</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code2">কোড</span>
+                                <i class="fab fa-github"></i> Code
                             </a>
                             <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo2">লাইভ ডেমো</span>
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-database"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project3Title">রিয়েল-টাইম ডেটা ড্যাশবোর্ড</h3>
-                        <p class="project-description" id="project3Desc">কী ব্যবসায়িক মেট্রিক্স রিয়েল-টাইমে নিরীক্ষণের
-                            জন্য একটি ইন্টারেক্টিভ ড্যাশবোর্ড তৈরি করা হয়েছে, যা সিদ্ধান্ত গ্রহণের সময় ৪০% কমিয়েছে।
-                        </p>
+                        <h3 class="project-title">Real-time Data Dashboard</h3>
+                        <p class="project-description">Created an interactive dashboard for monitoring key business metrics in real-time, reducing decision-making time by 40%.</p>
                         <div class="project-tags">
-                            <span class="tag">টেবলু</span>
-                            <span class="tag">এসকিউএল</span>
-                            <span class="tag">ডেটা ভিজ্যুয়ালাইজেশন</span>
+                            <span class="tag">Tableau</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code3">কোড</span>
+                                <i class="fab fa-github"></i> Code
                             </a>
                             <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo3">লাইভ ডেমো</span>
+                                <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
@@ -1585,34 +1282,29 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title" id="experienceTitle">পেশাগত অভিজ্ঞতা</h2>
+            <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 id="exp1Title">সিনিয়র ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp1Date">২০২২ - বর্তমান</span>
-                        <p id="exp1Desc">বেশ কয়েকটি প্রকল্পের জন্য ডেটা বিশ্লেষণ উদ্যোগ পরিচালনা করেছেন, ব্যবসায়িক
-                            বৃদ্ধি চালানোর জন্য উন্নত বিশ্লেষণ কৌশল প্রয়োগ করেছেন। জুনিয়র অ্যানালিস্টদের পরামর্শ
-                            দেওয়া এবং স্বয়ংক্রিয় রিপোর্টিং সিস্টেম তৈরি করেছেন।</p>
+                        <h3>Senior Data Analyst</h3>
+                        <span class="date">2022 - Present</span>
+                        <p>Led data analysis initiatives for multiple projects, implementing advanced analytics techniques to drive business growth. Mentored junior analysts and developed automated reporting systems.</p>
                     </div>
                 </div>
-
+                
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <h3 id="exp2Title">ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp2Date">২০২০ - ২০২২</span>
-                        <p id="exp2Desc">ট্রেন্ড এবং প্যাটার্ন শনাক্ত করার জন্য জটিল ডেটাসেট বিশ্লেষণ করেছেন, ফলাফল
-                            যোগাযোগের জন্য ভিজ্যুয়ালাইজেশন তৈরি করেছেন এবং ডেটা-চালিত সমাধান বাস্তবায়নের জন্য
-                            ক্রস-ফাংশনাল টিমের সাথে সহযোগিতা করেছেন।</p>
+                        <h3>Data Analyst</h3>
+                        <span class="date">2020 - 2022</span>
+                        <p>Analyzed complex datasets to identify trends and patterns, created visualizations to communicate findings, and collaborated with cross-functional teams to implement data-driven solutions.</p>
                     </div>
                 </div>
-
+                
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 id="exp3Title">জুনিয়র ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp3Date">২০১৮ - ২০২০</span>
-                        <p id="exp3Desc">ডেটা সংগ্রহ এবং পরিষ্কারকরণ প্রক্রিয়ায় সহায়তা করেছেন, মৌলিক পরিসংখ্যানগত
-                            বিশ্লেষণ করেছেন এবং ড্যাশবোর্ড ও রিপোর্ট তৈরিতে অবদান রেখেছেন।</p>
+                        <h3>Junior Data Analyst</h3>
+                        <span class="date">2018 - 2020</span>
+                        <p>Assisted in data collection and cleaning processes, performed basic statistical analysis, and contributed to the development of dashboards and reports.</p>
                     </div>
                 </div>
             </div>
@@ -1622,7 +1314,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" id="contactTitle">যোগাযোগ করুন</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1630,51 +1322,51 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="emailTitle">ইমেইল</h4>
+                            <h4>Email</h4>
                             <p>samir47573@gmail.com</p>
                         </div>
                     </div>
-
+                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="phoneTitle">ফোন</h4>
-                            <p>০১৮৭০-০৪৭৫৭৩</p>
-                            <p id="whatsappText">(হোয়াটসঅ্যাপেও উপলব্ধ)</p>
+                            <h4>Phone</h4>
+                            <p>01870-047573</p>
+                            <p>(Also available on WhatsApp)</p>
                         </div>
                     </div>
-
+                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="locationTitle">অবস্থান</h4>
-                            <p>চট্টগ্রাম, বাংলাদেশ</p>
+                            <h4>Location</h4>
+                            <p>Chattogram, Bangladesh</p>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/mblnabak" method="POST">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <label for="name" id="nameLabel">নাম</label>
+                            <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="email" id="emailLabel">ইমেইল</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="message" id="messageLabel">বার্তা</label>
+                            <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-
-                        <button type="submit" class="submit-btn" id="submitBtn">বার্তা পাঠান</button>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1685,8 +1377,8 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo" id="footerLogo">
-                    <i class="fas fa-chart-line"></i> সামির হোসেন মাহিম
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i> SAMIR HOSSAIN MAHIM
                 </div>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -1694,248 +1386,66 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-kaggle"></i></a>
                 </div>
-                <div class="copyright" id="copyright">
-                    &copy; ২০২৩ সামির হোসেন মাহিম। সর্বস্বত্ব সংরক্ষিত।
+                <div class="copyright">
+                    &copy; 2023 SAMIR HOSSAIN MAHIM. All Rights Reserved.
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Language Badge -->
-    <div class="language-badge" id="languageBadge">
-        <i class="fas fa-globe"></i>
-        <span id="currentLanguage">বাংলা</span>
-    </div>
-
     <script>
-        // Language Support
-        const translations = {
-            bn: {
-                // Navigation
-                home: "হোম",
-                about: "পরিচিতি",
-                skills: "দক্ষতা",
-                projects: "প্রকল্প",
-                experience: "অভিজ্ঞতা",
-                contact: "যোগাযোগ",
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix-rain');
+        const ctx = canvas.getContext('2d');
 
-                // Hero Section
-                heroTitle: "সামির হোসেন মাহিম",
-                heroSubtitle: "ডেটা বিশ্লেষণ করে সুযোগ তৈরি করি। পাইথন, এসকিউএল, এবং মেশিন লার্নিং ব্যবহার করে জটিল ডেটাকে বোধগম্য অন্তর্দৃষ্টিতে রূপান্তর করি।",
-                projectsBtn: "প্রকল্প দেখুন",
-                contactBtn: "যোগাযোগ করুন",
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-                // Section Titles
-                aboutTitle: "পরিচিতি",
-                skillsTitle: "প্রযুক্তিগত দক্ষতা",
-                projectsTitle: "প্রকল্পসমূহ",
-                experienceTitle: "পেশাগত অভিজ্ঞতা",
-                contactTitle: "যোগাযোগ করুন",
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        const matrixArray = matrix.split("");
 
-                // Projects
-                project1Title: "বিক্রয় পূর্বাভাস মডেল",
-                project1Desc: "ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২% নির্ভুলতা অর্জন করা হয়েছে।",
-                project2Title: "গ্রাহক সেগমেন্টেশন বিশ্লেষণ",
-                project2Desc: "ক্রয় আচরণের ভিত্তিতে গ্রাহকদের সেগমেন্ট করার জন্য ক্লাস্টারিং অ্যালগরিদম বাস্তবায়ন করা হয়েছে, যা বিপণন রিটার্নে ৩৫% উন্নতি করেছে।",
-                project3Title: "রিয়েল-টাইম ডেটা ড্যাশবোর্ড",
-                project3Desc: "কী ব্যবসায়িক মেট্রিক্স রিয়েল-টাইমে নিরীক্ষণের জন্য একটি ইন্টারেক্টিভ ড্যাশবোর্ড তৈরি করা হয়েছে, যা সিদ্ধান্ত গ্রহণের সময় ৪০% কমিয়েছে।",
-                code1: "কোড",
-                code2: "কোড",
-                code3: "কোড",
-                demo1: "লাইভ ডেমো",
-                demo2: "লাইভ ডেমো",
-                demo3: "লাইভ ডেমো",
+        const fontSize = 10;
+        const columns = canvas.width / fontSize;
 
-                // Experience
-                exp1Title: "সিনিয়র ডেটা অ্যানালিস্ট",
-                exp1Date: "২০২২ - বর্তমান",
-                exp1Desc: "বেশ কয়েকটি প্রকল্পের জন্য ডেটা বিশ্লেষণ উদ্যোগ পরিচালনা করেছেন, ব্যবসায়িক বৃদ্ধি চালানোর জন্য উন্নত বিশ্লেষণ কৌশল প্রয়োগ করেছেন। জুনিয়র অ্যানালিস্টদের পরামর্শ দেওয়া এবং স্বয়ংক্রিয় রিপোর্টিং সিস্টেম তৈরি করেছেন।",
-                exp2Title: "ডেটা অ্যানালিস্ট",
-                exp2Date: "২০২০ - ২০২২",
-                exp2Desc: "ট্রেন্ড এবং প্যাটার্ন শনাক্ত করার জন্য জটিল ডেটাসেট বিশ্লেষণ করেছেন, ফলাফল যোগাযোগের জন্য ভিজ্যুয়ালাইজেশন তৈরি করেছেন এবং ডেটা-চালিত সমাধান বাস্তবায়নের জন্য ক্রস-ফাংশনাল টিমের সাথে সহযোগিতা করেছেন।",
-                exp3Title: "জুনিয়র ডেটা অ্যানালিস্ট",
-                exp3Date: "২০১৮ - ২০২০",
-                exp3Desc: "ডেটা সংগ্রহ এবং পরিষ্কারকরণ প্রক্রিয়ায় সহায়তা করেছেন, মৌলিক পরিসংখ্যানগত বিশ্লেষণ করেছেন এবং ড্যাশবোর্ড ও রিপোর্ট তৈরিতে অবদান রেখেছেন।",
-
-                // Contact
-                emailTitle: "ইমেইল",
-                phoneTitle: "ফোন",
-                whatsappText: "(হোয়াটসঅ্যাপেও উপলব্ধ)",
-                locationTitle: "অবস্থান",
-                nameLabel: "নাম",
-                emailLabel: "ইমেইল",
-                messageLabel: "বার্তা",
-                submitBtn: "বার্তা পাঠান",
-
-                // Footer
-                footerLogo: "সামির হোসেন মাহিম",
-                copyright: "&copy; ২০২৩ সামির হোসেন মাহিম। সর্বস্বত্ব সংরক্ষিত।",
-
-                // Language Badge
-                currentLanguage: "বাংলা",
-                toggleLanguage: "English"
-            },
-            en: {
-                // Navigation
-                home: "Home",
-                about: "About",
-                skills: "Skills",
-                projects: "Projects",
-                experience: "Experience",
-                contact: "Contact",
-
-                // Hero Section
-                heroTitle: "SAMIR HOSSAIN MAHIM",
-                heroSubtitle: "Creating opportunities through data analysis. Transforming complex data into meaningful insights using Python, SQL, and Machine Learning.",
-                projectsBtn: "View Projects",
-                contactBtn: "Contact Me",
-
-                // Section Titles
-                aboutTitle: "About Me",
-                skillsTitle: "Technical Skills",
-                projectsTitle: "Featured Projects",
-                experienceTitle: "Professional Experience",
-                contactTitle: "Get In Touch",
-
-                // Projects
-                project1Title: "Sales Forecasting Model",
-                project1Desc: "Developed a machine learning model to predict future sales based on historical data, achieving 92% accuracy.",
-                project2Title: "Customer Segmentation Analysis",
-                project2Desc: "Implemented clustering algorithms to segment customers based on purchasing behavior, improving marketing ROI by 35%.",
-                project3Title: "Real-time Data Dashboard",
-                project3Desc: "Created an interactive dashboard for monitoring key business metrics in real-time, reducing decision-making time by 40%.",
-                code1: "Code",
-                code2: "Code",
-                code3: "Code",
-                demo1: "Live Demo",
-                demo2: "Live Demo",
-                demo3: "Live Demo",
-
-                // Experience
-                exp1Title: "Senior Data Analyst",
-                exp1Date: "2022 - Present",
-                exp1Desc: "Led data analysis initiatives for multiple projects, implementing advanced analytics techniques to drive business growth. Mentored junior analysts and developed automated reporting systems.",
-                exp2Title: "Data Analyst",
-                exp2Date: "2020 - 2022",
-                exp2Desc: "Analyzed complex datasets to identify trends and patterns, created visualizations to communicate findings, and collaborated with cross-functional teams to implement data-driven solutions.",
-                exp3Title: "Junior Data Analyst",
-                exp3Date: "2018 - 2020",
-                exp3Desc: "Assisted in data collection and cleaning processes, performed basic statistical analysis, and contributed to the development of dashboards and reports.",
-
-                // Contact
-                emailTitle: "Email",
-                phoneTitle: "Phone",
-                whatsappText: "(Also available on WhatsApp)",
-                locationTitle: "Location",
-                nameLabel: "Name",
-                emailLabel: "Email",
-                messageLabel: "Message",
-                submitBtn: "Send Message",
-
-                // Footer
-                footerLogo: "SAMIR HOSSAIN MAHIM",
-                copyright: "&copy; 2023 SAMIR HOSSAIN MAHIM. All Rights Reserved.",
-
-                // Language Badge
-                currentLanguage: "English",
-                toggleLanguage: "বাংলা"
-            }
-        };
-
-        // Set initial language
-        let currentLang = 'bn';
-        const body = document.body;
-
-        // Language Toggle Function
-        function toggleLanguage() {
-            currentLang = currentLang === 'bn' ? 'en' : 'bn';
-            body.classList.toggle('bn');
-            body.classList.toggle('en');
-
-            // Update all translatable elements
-            updateLanguage(currentLang);
-
-            // Update language badge
-            document.getElementById('currentLanguage').textContent =
-                currentLang === 'bn' ? 'বাংলা' : 'English';
-
-            // Update language toggle button
-            document.querySelector('#languageToggle span').textContent =
-                currentLang === 'bn' ? 'English' : 'বাংলা';
+        const drops = [];
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1;
         }
 
-        // Update all translatable elements
-        function updateLanguage(lang) {
-            const trans = translations[lang];
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Update navigation
-            document.querySelectorAll('.nav-link').forEach((link, index) => {
-                const keys = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
-                if (index < keys.length) {
-                    link.textContent = trans[keys[index]];
+            ctx.fillStyle = '#00ffcc';
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
                 }
-            });
-
-            // Update hero section
-            document.getElementById('heroTitle').textContent = trans.heroTitle;
-            document.getElementById('heroSubtitle').textContent = trans.heroSubtitle;
-            document.getElementById('projectsBtn').textContent = trans.projectsBtn;
-            document.getElementById('contactBtn').textContent = trans.contactBtn;
-
-            // Update section titles
-            document.getElementById('aboutTitle').textContent = trans.aboutTitle;
-            document.getElementById('skillsTitle').textContent = trans.skillsTitle;
-            document.getElementById('projectsTitle').textContent = trans.projectsTitle;
-            document.getElementById('experienceTitle').textContent = trans.experienceTitle;
-            document.getElementById('contactTitle').textContent = trans.contactTitle;
-
-            // Update projects
-            document.getElementById('project1Title').textContent = trans.project1Title;
-            document.getElementById('project1Desc').textContent = trans.project1Desc;
-            document.getElementById('project2Title').textContent = trans.project2Title;
-            document.getElementById('project2Desc').textContent = trans.project2Desc;
-            document.getElementById('project3Title').textContent = trans.project3Title;
-            document.getElementById('project3Desc').textContent = trans.project3Desc;
-            document.getElementById('code1').textContent = trans.code1;
-            document.getElementById('code2').textContent = trans.code2;
-            document.getElementById('code3').textContent = trans.code3;
-            document.getElementById('demo1').textContent = trans.demo1;
-            document.getElementById('demo2').textContent = trans.demo2;
-            document.getElementById('demo3').textContent = trans.demo3;
-
-            // Update experience
-            document.getElementById('exp1Title').textContent = trans.exp1Title;
-            document.getElementById('exp1Date').textContent = trans.exp1Date;
-            document.getElementById('exp1Desc').textContent = trans.exp1Desc;
-            document.getElementById('exp2Title').textContent = trans.exp2Title;
-            document.getElementById('exp2Date').textContent = trans.exp2Date;
-            document.getElementById('exp2Desc').textContent = trans.exp2Desc;
-            document.getElementById('exp3Title').textContent = trans.exp3Title;
-            document.getElementById('exp3Date').textContent = trans.exp3Date;
-            document.getElementById('exp3Desc').textContent = trans.exp3Desc;
-
-            // Update contact
-            document.getElementById('emailTitle').textContent = trans.emailTitle;
-            document.getElementById('phoneTitle').textContent = trans.phoneTitle;
-            document.getElementById('whatsappText').textContent = trans.whatsappText;
-            document.getElementById('locationTitle').textContent = trans.locationTitle;
-            document.getElementById('nameLabel').textContent = trans.nameLabel;
-            document.getElementById('emailLabel').textContent = trans.emailLabel;
-            document.getElementById('messageLabel').textContent = trans.messageLabel;
-            document.getElementById('submitBtn').textContent = trans.submitBtn;
-
-            // Update footer
-            document.getElementById('footerLogo').innerHTML = `<i class="fas fa-chart-line"></i> ${trans.footerLogo}`;
-            document.getElementById('copyright').innerHTML = trans.copyright;
+                drops[i]++;
+            }
         }
+
+        setInterval(drawMatrix, 35);
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
 
         // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
 
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
-
+            
             if (body.classList.contains('light-mode')) {
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
@@ -1946,22 +1456,20 @@
         });
 
         // Mobile Navigation
-        const hamburger = document.getElementById('hamburger');
+        const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
         });
 
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+                
                 navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-
+                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -1970,7 +1478,7 @@
 
         // Skill Progress Animation
         const skillBars = document.querySelectorAll('.skill-progress-bar');
-
+        
         const animateSkills = () => {
             skillBars.forEach(skillBar => {
                 const skill = skillBar.getAttribute('data-skill');
@@ -1978,89 +1486,49 @@
             });
         };
 
-        // Intersection Observers
+        // Intersection Observer for Skill Animation
         const skillsSection = document.querySelector('.skills');
         const skillsObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 animateSkills();
                 skillsObserver.unobserve(skillsSection);
             }
-        }, { threshold: 0.3 });
+        }, { threshold: 0.5 });
 
         skillsObserver.observe(skillsSection);
 
-        // Timeline Animation
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, { threshold: 0.3 });
-
-        timelineItems.forEach(item => {
-            timelineObserver.observe(item);
-        });
-
         // Form Submission
         const contactForm = document.getElementById('contactForm');
-
+        
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
-            // Show success message based on language
-            const message = currentLang === 'bn'
-                ? 'ধন্যবাদ! আপনার বার্তা পাঠানো হয়েছে। আমি শীঘ্রই আপনার সাথে যোগাযোগ করব।'
-                : 'Thank you! Your message has been sent. I will get back to you soon.';
-
-            alert(message);
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
         });
 
         // Header Background on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-
+            
             if (window.scrollY > 100) {
-                header.style.background = body.classList.contains('light-mode')
-                    ? 'rgba(248, 250, 252, 0.98)'
-                    : 'rgba(15, 23, 42, 0.98)';
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
             } else {
-                header.style.background = body.classList.contains('light-mode')
-                    ? 'rgba(248, 250, 252, 0.95)'
-                    : 'rgba(15, 23, 42, 0.95)';
-                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(10, 10, 10, 0.8)';
+                header.style.boxShadow = 'none';
             }
-        });
-
-        // Language Toggle Event Listeners
-        document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
-        document.getElementById('languageBadge').addEventListener('click', toggleLanguage);
-
-        // Initialize
-        updateLanguage(currentLang);
-        animateSkills();
-
-        // Add fade-in animation to all sections
-        const sections = document.querySelectorAll('section');
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+            
+            if (document.body.classList.contains('light-mode')) {
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.9)';
                 }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            sectionObserver.observe(section);
+            }
         });
     </script>
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #2563eb;
@@ -34,6 +37,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         body {
@@ -219,7 +226,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 20%);
@@ -256,8 +263,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .hero h1 {
@@ -373,6 +387,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -478,8 +493,15 @@
         }
 
         @keyframes shine {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
+
+            0%,
+            100% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(100%);
+            }
         }
 
         .profile-img img {
@@ -1116,7 +1138,7 @@
             .container {
                 padding: 0 40px;
             }
-            
+
             .hero h1 {
                 font-size: 3rem;
             }
@@ -1231,7 +1253,7 @@
             .container {
                 padding: 0 20px;
             }
-            
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -1290,6 +1312,7 @@
         }
     </style>
 </head>
+
 <body class="bn">
     <!-- Header -->
     <header>
@@ -1300,16 +1323,16 @@
                     <span>সামির হোসেন মাহিম</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">হোম</a></li>
-                    <li><a href="#about" class="nav-link">পরিচিতি</a></li>
-                    <li><a href="#skills" class="nav-link">দক্ষতা</a></li>
-                    <li><a href="#projects" class="nav-link">প্রকল্প</a></li>
-                    <li><a href="#experience" class="nav-link">অভিজ্ঞতা</a></li>
-                    <li><a href="#contact" class="nav-link">যোগাযোগ</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Courses & Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-right">
                     <div class="language-toggle" id="languageToggle">
-                        <span class="bn">English</span>
+                        <span class="en">বাংলা</span>
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="theme-toggle" id="themeToggle">
@@ -1332,13 +1355,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fas fa-star"></i> ডেটা অ্যানালিস্ট
+                    <i class="fas fa-star"></i> Data Analyst
                 </div>
-                <h1 id="heroTitle">সামির হোসেন মাহিম</h1>
-                <p id="heroSubtitle">ডেটা বিশ্লেষণ করে সুযোগ তৈরি করি। পাইথন, এসকিউএল, এবং মেশিন লার্নিং ব্যবহার করে জটিল ডেটাকে বোধগম্য অন্তর্দৃষ্টিতে রূপান্তর করি।</p>
+                <h1 id="heroTitle">SAMIR HOSSAIN MAHIM</h1>
+                <p id="heroSubtitle">Creating opportunities through data analysis. Transforming complex data into
+                    meaningful insights using Python, SQL, and Machine Learning.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn" id="projectsBtn">প্রকল্প দেখুন</a>
-                    <a href="#contact" class="btn btn-outline" id="contactBtn">যোগাযোগ করুন</a>
+                    <a href="#projects" class="btn" id="projectsBtn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline" id="contactBtn">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -1347,46 +1371,52 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" id="aboutTitle">পরিচিতি</h2>
+            <h2 class="section-title" id="aboutTitle">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>আসসালামু আলাইকুম! আমি <span class="highlight">সামির হোসেন মাহিম</span>, একজন আগ্রহী ডেটা অ্যানালিস্ট। পরিসংখ্যানগত বিশ্লেষণ, ডেটা ভিজ্যুয়ালাইজেশন, এবং মেশিন লার্নিং-এ আমার দক্ষতা রয়েছে। আমি জটিল ডেটাসেট থেকে অর্থপূর্ণ তথ্য উদ্ধার করে ব্যবসায়িক সিদ্ধান্ত গ্রহণে সহায়তা করি।</p>
-                    
-                    <p>আমার কাজের পদ্ধতিতে প্রযুক্তিগত দক্ষতা এবং ব্যবসায়িক বোধের সমন্বয় ঘটে, যা ডেটা সায়েন্স এবং বাস্তব প্রয়োগের মধ্যে সেতুবন্ধন তৈরি করে। প্রেডিক্টিভ মডেল তৈরি, ইন্টারেক্টিভ ড্যাশবোর্ড ডিজাইন, বা গভীর পরিসংখ্যানগত বিশ্লেষণ - যেকোনো চ্যালেঞ্জ গ্রহণে আমি সবসময় উৎসাহী।</p>
-                    
+                    <p id="aboutDesc1">Hello! I am <span class="highlight">Samir Hossain Mahim</span>, a passionate Data
+                        Analyst. I have
+                        expertise in statistical analysis, data visualization, and machine learning. I help in business
+                        decision-making by extracting meaningful information from complex datasets.</p>
+
+                    <p id="aboutDesc2">My work approach combines technical skills with business acumen, creating a
+                        bridge between data
+                        science and real-world application. Whether building predictive models, designing interactive
+                        dashboards, or conducting deep statistical analysis - I am always enthusiastic about taking on
+                        any challenge.</p>
+
                     <div class="stats">
                         <div class="stat-item">
                             <div class="stat-number">50+</div>
-                            <div class="stat-text">প্রকল্প সম্পন্ন</div>
+                            <div class="stat-text" id="stat1">Projects Completed</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">3+</div>
-                            <div class="stat-text">বছরের অভিজ্ঞতা</div>
+                            <div class="stat-text" id="stat2">Years Experience</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
-                            <div class="stat-text">ক্লায়েন্ট সন্তুষ্টি</div>
+                            <div class="stat-text" id="stat3">Client Satisfaction</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">95%</div>
-                            <div class="stat-text">ডেটা নির্ভুলতা</div>
+                            <div class="stat-text" id="stat4">Data Accuracy</div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <div class="profile-card">
                         <div class="profile-img">
-                        <img src="images/samir_photo.png" alt="Profile">
+                            <img src="images/samir_photo.png" alt="Profile">
                         </div>
                         <div class="profile-info">
-                            <h3>সামির হোসেন মাহিম</h3>
-                            <p>ডেটা অ্যানালিস্ট</p>
-                            <p>চট্টগ্রাম, বাংলাদেশ</p>
+                            <h3 id="profileName">Samir Hossain Mahim</h3>
+                            <p id="profileRole">Data Analyst</p>
+                            <p id="profileLoc">Chittagong, Bangladesh</p>
                             <div class="social-links">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-kaggle"></i></a>
+                                <a href="https://www.facebook.com/share/1DFCTkhDpU"><i class="fab fa-facebook"></i></a>
+                                <a href="https://github.com/developer-samir-hossen"><i class="fab fa-github"></i></a>
+                                <a href="https://wa.me/+8801870047573"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1398,69 +1428,75 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" id="skillsTitle">প্রযুক্তিগত দক্ষতা</h2>
+            <h2 class="section-title" id="skillsTitle">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="skill-title">ডেটা বিশ্লেষণ</h3>
-                    <p class="skill-description">জটিল ডেটাসেট থেকে তথ্য আহরণ, পরিষ্কারকরণ এবং বিশ্লেষণ করে ট্রেন্ড ও প্যাটার্ন শনাক্তকরণে দক্ষ।</p>
+                    <h3 class="skill-title">Data Analysis</h3>
+                    <p class="skill-description">Skilled in extracting, cleaning, and analyzing information from complex
+                        datasets to identify trends and patterns.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="90"></div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-python"></i>
                     </div>
-                    <h3 class="skill-title">পাইথন</h3>
-                    <p class="skill-description">পান্ডাস, নামপাই, ম্যাটপ্লটলিব, এবং স্কিকিট-লার্ন সহ পাইথন লাইব্রেরিতে উন্নত জ্ঞান।</p>
+                    <h3 class="skill-title">Python</h3>
+                    <p class="skill-description">Advanced knowledge of Python libraries including Pandas, NumPy,
+                        Matplotlib, and Scikit-learn.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="85"></div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3 class="skill-title">ডেটা ভিজ্যুয়ালাইজেশন</h3>
-                    <p class="skill-description">টেবলু, পাওয়ার বিআই, এবং পাইথন লাইব্রেরি ব্যবহার করে ডেটার আকর্ষণীয় ভিজ্যুয়াল উপস্থাপনা তৈরি।</p>
+                    <h3 class="skill-title">Data Visualization</h3>
+                    <p class="skill-description">Creating compelling visual representations of data using Tableau, Power
+                        BI, and Python libraries.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="80"></div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="skill-title">মেশিন লার্নিং</h3>
-                    <p class="skill-description">সুপারভাইজড এবং আনসুপারভাইজড লার্নিং অ্যালগরিদম ব্যবহার করে প্রেডিক্টিভ মডেলিং অভিজ্ঞতা।</p>
+                    <h3 class="skill-title">Machine Learning</h3>
+                    <p class="skill-description">Experience in predictive modeling using supervised and unsupervised
+                        learning algorithms.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="75"></div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="skill-title">এসকিউএল</h3>
-                    <p class="skill-description">ডেটা এক্সট্রাকশন, ম্যানিপুলেশন এবং ডেটাবেস ম্যানেজমেন্টের জন্য এসকিউএলের শক্তিশালী জ্ঞান।</p>
+                    <h3 class="skill-title">SQL</h3>
+                    <p class="skill-description">Strong knowledge of SQL for data extraction, manipulation, and database
+                        management.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="85"></div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="skill-title">পরিসংখ্যানগত বিশ্লেষণ</h3>
-                    <p class="skill-description">পরিসংখ্যানগত ধারণা এবং বাস্তব-বিশ্বের ডেটা সমস্যায় তাদের প্রয়োগের গভীর বোধগম্যতা।</p>
+                    <h3 class="skill-title">Statistical Analysis</h3>
+                    <p class="skill-description">Deep understanding of statistical concepts and their application to
+                        real-world data problems.</p>
                     <div class="skill-progress">
                         <div class="skill-progress-bar" data-skill="80"></div>
                     </div>
@@ -1472,72 +1508,75 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title" id="projectsTitle">প্রকল্পসমূহ</h2>
+            <h2 class="section-title" id="projectsTitle">Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-chart-pie"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project1Title">বিক্রয় পূর্বাভাস মডেল</h3>
-                        <p class="project-description" id="project1Desc">ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২% নির্ভুলতা অর্জন করা হয়েছে।</p>
+                        <h3 class="project-title" id="project1Title">Sales Forecasting Model</h3>
+                        <p class="project-description" id="project1Desc">Developed a machine learning model to predict
+                            future sales based on historical data, achieving 92% accuracy.</p>
                         <div class="project-tags">
-                            <span class="tag">পাইথন</span>
-                            <span class="tag">মেশিন লার্নিং</span>
-                            <span class="tag">টাইম সিরিজ</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Time Series</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code1">কোড</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fab fa-github"></i> <span id="code1">Code</span>
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo1">লাইভ ডেমো</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> <span id="demo1">Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project2Title">গ্রাহক সেগমেন্টেশন বিশ্লেষণ</h3>
-                        <p class="project-description" id="project2Desc">ক্রয় আচরণের ভিত্তিতে গ্রাহকদের সেগমেন্ট করার জন্য ক্লাস্টারিং অ্যালগরিদম বাস্তবায়ন করা হয়েছে, যা বিপণন রিটার্নে ৩৫% উন্নতি করেছে।</p>
+                        <h3 class="project-title" id="project2Title">Customer Segmentation Analysis</h3>
+                        <p class="project-description" id="project2Desc">Implemented clustering algorithms to segment
+                            customers based on purchasing behavior, improving marketing ROI by 35%.</p>
                         <div class="project-tags">
-                            <span class="tag">পাইথন</span>
-                            <span class="tag">ক্লাস্টারিং</span>
-                            <span class="tag">ডেটা ভিজ্যুয়ালাইজেশন</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Clustering</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code2">কোড</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fab fa-github"></i> <span id="code2">Code</span>
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo2">লাইভ ডেমো</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> <span id="demo2">Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fas fa-database"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title" id="project3Title">রিয়েল-টাইম ডেটা ড্যাশবোর্ড</h3>
-                        <p class="project-description" id="project3Desc">কী ব্যবসায়িক মেট্রিক্স রিয়েল-টাইমে নিরীক্ষণের জন্য একটি ইন্টারেক্টিভ ড্যাশবোর্ড তৈরি করা হয়েছে, যা সিদ্ধান্ত গ্রহণের সময় ৪০% কমিয়েছে।</p>
+                        <h3 class="project-title" id="project3Title">Real-time Data Dashboard</h3>
+                        <p class="project-description" id="project3Desc">Created an interactive dashboard for monitoring
+                            key business metrics in real-time, reducing decision-making time by 40%.</p>
                         <div class="project-tags">
-                            <span class="tag">টেবলু</span>
-                            <span class="tag">এসকিউএল</span>
-                            <span class="tag">ডেটা ভিজ্যুয়ালাইজেশন</span>
+                            <span class="tag">Tableau</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Data Visualization</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> <span id="code3">কোড</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fab fa-github"></i> <span id="code3">Code</span>
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> <span id="demo3">লাইভ ডেমো</span>
+                            <a href="https://github.com/developer-samir-hossen" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> <span id="demo3">Live Demo</span>
                             </a>
                         </div>
                     </div>
@@ -1549,29 +1588,26 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title" id="experienceTitle">পেশাগত অভিজ্ঞতা</h2>
+            <h2 class="section-title" id="experienceTitle">Courses & Skills</h2>
             <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3 id="exp1Title">সিনিয়র ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp1Date">২০২২ - বর্তমান</span>
-                        <p id="exp1Desc">বেশ কয়েকটি প্রকল্পের জন্য ডেটা বিশ্লেষণ উদ্যোগ পরিচালনা করেছেন, ব্যবসায়িক বৃদ্ধি চালানোর জন্য উন্নত বিশ্লেষণ কৌশল প্রয়োগ করেছেন। জুনিয়র অ্যানালিস্টদের পরামর্শ দেওয়া এবং স্বয়ংক্রিয় রিপোর্টিং সিস্টেম তৈরি করেছেন।</p>
-                    </div>
-                </div>
-                
+
+
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <h3 id="exp2Title">ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp2Date">২০২০ - ২০২২</span>
-                        <p id="exp2Desc">ট্রেন্ড এবং প্যাটার্ন শনাক্ত করার জন্য জটিল ডেটাসেট বিশ্লেষণ করেছেন, ফলাফল যোগাযোগের জন্য ভিজ্যুয়ালাইজেশন তৈরি করেছেন এবং ডেটা-চালিত সমাধান বাস্তবায়নের জন্য ক্রস-ফাংশনাল টিমের সাথে সহযোগিতা করেছেন।</p>
+                        <h3 id="exp2Title">Junior Data Analyst Course</h3>
+                        <span class="date" id="exp2Date">2024</span>
+                        <p id="exp2Desc">Completed Data Analytics course at Ostad platform. Gained practical experience
+                            working on real-world data projects using Python, SQL, and Machine Learning.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 id="exp3Title">জুনিয়র ডেটা অ্যানালিস্ট</h3>
-                        <span class="date" id="exp3Date">২০১৮ - ২০২০</span>
-                        <p id="exp3Desc">ডেটা সংগ্রহ এবং পরিষ্কারকরণ প্রক্রিয়ায় সহায়তা করেছেন, মৌলিক পরিসংখ্যানগত বিশ্লেষণ করেছেন এবং ড্যাশবোর্ড ও রিপোর্ট তৈরিতে অবদান রেখেছেন।</p>
+                        <h3 id="exp3Title">Data Analysis Specialization Course</h3>
+                        <span class="date" id="exp3Date">2024</span>
+                        <p id="exp3Desc">Completed Data Analysis Specialization at aiQuest Intelligence. Gained skills
+                            in data cleaning, visualization, and generating business insights via 6 real-world projects.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1581,7 +1617,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" id="contactTitle">যোগাযোগ করুন</h2>
+            <h2 class="section-title" id="contactTitle">Get In Touch</h2>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1589,51 +1625,51 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="emailTitle">ইমেইল</h4>
+                            <h4 id="emailTitle">Email</h4>
                             <p>samir47573@gmail.com</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="phoneTitle">ফোন</h4>
-                            <p>০১৮৭০-০৪৭৫৭৩</p>
-                            <p id="whatsappText">(হোয়াটসঅ্যাপেও উপলব্ধ)</p>
+                            <h4 id="phoneTitle">Phone</h4>
+                            <a href="tel:+8801870047573"> 01870-047573</a>
+                            <p id="whatsappText">(Also available on WhatsApp)</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-text">
-                            <h4 id="locationTitle">অবস্থান</h4>
-                            <p>চট্টগ্রাম, বাংলাদেশ</p>
+                            <h4 id="locationTitle">Location</h4>
+                            <p>Chittagong, Bangladesh</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/mblnabak" method="POST">
                         <div class="form-group">
-                            <label for="name" id="nameLabel">নাম</label>
+                            <label for="name" id="nameLabel">Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="email" id="emailLabel">ইমেইল</label>
+                            <label for="email" id="emailLabel">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="message" id="messageLabel">বার্তা</label>
+                            <label for="message" id="messageLabel">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="submit-btn" id="submitBtn">বার্তা পাঠান</button>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1645,420 +1681,423 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo" id="footerLogo">
-                    <i class="fas fa-chart-line"></i> সামির হোসেন মাহিম
+                    <i class="fas fa-chart-line"></i> SAMIR HOSSAIN MAHIM
                 </div>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-kaggle"></i></a>
-                </div>
-                <div class="copyright" id="copyright">
-                    &copy; ২০২৩ সামির হোসেন মাহিম। সর্বস্বত্ব সংরক্ষিত।
+                    <a href="https://www.facebook.com/share/1DFCTkhDpU"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/developer-samir-hossen"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/+8801870047573"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
+            <div class="copyright" id="copyright">
+                &copy; 2023 SAMIR HOSSAIN MAHIM. All Rights Reserved.
+            </div>
+        </div>
         </div>
     </footer>
 
     <!-- Language Badge -->
     <div class="language-badge" id="languageBadge">
         <i class="fas fa-globe"></i>
-        <span id="currentLanguage">বাংলা</span>
+        <span id="currentLanguage">English</span>
     </div>
 
 
 
     <script>
-    // Language Support
-    const translations = {
-        bn: {
-            // Navigation
-            home: "হোম",
-            about: "পরিচিতি",
-            skills: "দক্ষতা",
-            projects: "প্রকল্প",
-            experience: "অভিজ্ঞতা",
-            contact: "যোগাযোগ",
-            
-            // Hero Section
-            heroTitle: "সামির হোসেন মাহিম",
-            heroSubtitle: "ডেটা বিশ্লেষণ করে সুযোগ তৈরি করি। পাইথন, এসকিউএল, এবং মেশিন লার্নিং ব্যবহার করে জটিল ডেটাকে বোধগম্য অন্তর্দৃষ্টিতে রূপান্তর করি।",
-            projectsBtn: "প্রকল্প দেখুন",
-            contactBtn: "যোগাযোগ করুন",
-            
-            // Section Titles
-            aboutTitle: "পরিচিতি",
-            skillsTitle: "প্রযুক্তিগত দক্ষতা",
-            projectsTitle: "প্রকল্পসমূহ",
-            experienceTitle: "পেশাগত অভিজ্ঞতা",
-            contactTitle: "যোগাযোগ করুন",
-            
-            // Projects
-            project1Title: "বিক্রয় পূর্বাভাস মডেল",
-            project1Desc: "ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২% নির্ভুলতা অর্জন করা হয়েছে।",
-            project2Title: "গ্রাহক সেগমেন্টেশন বিশ্লেষণ",
-            project2Desc: "ক্রয় আচরণের ভিত্তিতে গ্রাহকদের সেগমেন্ট করার জন্য ক্লাস্টারিং অ্যালগরিদম বাস্তবায়ন করা হয়েছে, যা বিপণন রিটার্নে ৩৫% উন্নতি করেছে।",
-            project3Title: "রিয়েল-টাইম ডেটা ড্যাশবোর্ড",
-            project3Desc: "কী ব্যবসায়িক মেট্রিক্স রিয়েল-টাইমে নিরীক্ষণের জন্য একটি ইন্টারেক্টিভ ড্যাশবোর্ড তৈরি করা হয়েছে, যা সিদ্ধান্ত গ্রহণের সময় ৪০% কমিয়েছে।",
-            code1: "কোড",
-            code2: "কোড",
-            code3: "কোড",
-            demo1: "লাইভ ডেমো",
-            demo2: "লাইভ ডেমো",
-            demo3: "লাইভ ডেমো",
-            
-            // Experience
-            exp1Title: "সিনিয়র ডেটা অ্যানালিস্ট",
-            exp1Date: "২০২২ - বর্তমান",
-            exp1Desc: "বেশ কয়েকটি প্রকল্পের জন্য ডেটা বিশ্লেষণ উদ্যোগ পরিচালনা করেছেন, ব্যবসায়িক বৃদ্ধি চালানোর জন্য উন্নত বিশ্লেষণ কৌশল প্রয়োগ করেছেন। জুনিয়র অ্যানালিস্টদের পরামর্শ দেওয়া এবং স্বয়ংক্রিয় রিপোর্টিং সিস্টেম তৈরি করেছেন।",
-            exp2Title: "ডেটা অ্যানালিস্ট",
-            exp2Date: "২০২০ - ২০২২",
-            exp2Desc: "ট্রেন্ড এবং প্যাটার্ন শনাক্ত করার জন্য জটিল ডেটাসেট বিশ্লেষণ করেছেন, ফলাফল যোগাযোগের জন্য ভিজ্যুয়ালাইজেশন তৈরি করেছেন এবং ডেটা-চালিত সমাধান বাস্তবায়নের জন্য ক্রস-ফাংশনাল টিমের সাথে সহযোগিতা করেছেন।",
-            exp3Title: "জুনিয়র ডেটা অ্যানালিস্ট",
-            exp3Date: "২০১৮ - ২০২০",
-            exp3Desc: "ডেটা সংগ্রহ এবং পরিষ্কারকরণ প্রক্রিয়ায় সহায়তা করেছেন, মৌলিক পরিসংখ্যানগত বিশ্লেষণ করেছেন এবং ড্যাশবোর্ড ও রিপোর্ট তৈরিতে অবদান রেখেছেন।",
-            
-            // Contact
-            emailTitle: "ইমেইল",
-            phoneTitle: "ফোন",
-            whatsappText: "(হোয়াটসঅ্যাপেও উপলব্ধ)",
-            locationTitle: "অবস্থান",
-            nameLabel: "নাম",
-            emailLabel: "ইমেইল",
-            messageLabel: "বার্তা",
-            submitBtn: "বার্তা পাঠান",
-            sendingText: "পাঠানো হচ্ছে...",
-            
-            // Footer
-            footerLogo: "সামির হোসেন মাহিম",
-            copyright: "&copy; ২০২৩ সামির হোসেন মাহিম। সর্বস্বত্ব সংরক্ষিত।",
-            
-            // Language Badge
-            currentLanguage: "বাংলা",
-            toggleLanguage: "English",
-            
-            // Form Messages
-            successMessage: "ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমি শীঘ্রই আপনার সাথে যোগাযোগ করব।",
-            errorMessage: "দুঃখিত! বার্তা পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
-            networkErrorMessage: "নেটওয়ার্ক ত্রুটি! অনুগ্রহ করে আবার চেষ্টা করুন।"
-        },
-        en: {
-            // Navigation
-            home: "Home",
-            about: "About",
-            skills: "Skills",
-            projects: "Projects",
-            experience: "Experience",
-            contact: "Contact",
-            
-            // Hero Section
-            heroTitle: "SAMIR HOSSAIN MAHIM",
-            heroSubtitle: "Creating opportunities through data analysis. Transforming complex data into meaningful insights using Python, SQL, and Machine Learning.",
-            projectsBtn: "View Projects",
-            contactBtn: "Contact Me",
-            
-            // Section Titles
-            aboutTitle: "About Me",
-            skillsTitle: "Technical Skills",
-            projectsTitle: "Featured Projects",
-            experienceTitle: "Professional Experience",
-            contactTitle: "Get In Touch",
-            
-            // Projects
-            project1Title: "Sales Forecasting Model",
-            project1Desc: "Developed a machine learning model to predict future sales based on historical data, achieving 92% accuracy.",
-            project2Title: "Customer Segmentation Analysis",
-            project2Desc: "Implemented clustering algorithms to segment customers based on purchasing behavior, improving marketing ROI by 35%.",
-            project3Title: "Real-time Data Dashboard",
-            project3Desc: "Created an interactive dashboard for monitoring key business metrics in real-time, reducing decision-making time by 40%.",
-            code1: "Code",
-            code2: "Code",
-            code3: "Code",
-            demo1: "Live Demo",
-            demo2: "Live Demo",
-            demo3: "Live Demo",
-            
-            // Experience
-            exp1Title: "Senior Data Analyst",
-            exp1Date: "2022 - Present",
-            exp1Desc: "Led data analysis initiatives for multiple projects, implementing advanced analytics techniques to drive business growth. Mentored junior analysts and developed automated reporting systems.",
-            exp2Title: "Data Analyst",
-            exp2Date: "2020 - 2022",
-            exp2Desc: "Analyzed complex datasets to identify trends and patterns, created visualizations to communicate findings, and collaborated with cross-functional teams to implement data-driven solutions.",
-            exp3Title: "Junior Data Analyst",
-            exp3Date: "2018 - 2020",
-            exp3Desc: "Assisted in data collection and cleaning processes, performed basic statistical analysis, and contributed to the development of dashboards and reports.",
-            
-            // Contact
-            emailTitle: "Email",
-            phoneTitle: "Phone",
-            whatsappText: "(Also available on WhatsApp)",
-            locationTitle: "Location",
-            nameLabel: "Name",
-            emailLabel: "Email",
-            messageLabel: "Message",
-            submitBtn: "Send Message",
-            sendingText: "Sending...",
-            
-            // Footer
-            footerLogo: "SAMIR HOSSAIN MAHIM",
-            copyright: "&copy; 2023 SAMIR HOSSAIN MAHIM. All Rights Reserved.",
-            
-            // Language Badge
-            currentLanguage: "English",
-            toggleLanguage: "বাংলা",
-            
-            // Form Messages
-            successMessage: "Thank you! Your message has been sent successfully. I will get back to you soon.",
-            errorMessage: "Sorry! Your message could not be sent. Please try again.",
-            networkErrorMessage: "Network error! Please try again."
+        // Language Support
+        const translations = {
+            bn: {
+                // Navigation
+                home: "হোম",
+                about: "পরিচিতি",
+                skills: "দক্ষতা",
+                projects: "প্রজেক্ট",
+                experience: "অভিজ্ঞতা",
+                contact: "যোগাযোগ",
+
+                // Hero Section
+                heroTitle: "সামির হোসেন মাহিম",
+                heroSubtitle: "ডেটা বিশ্লেষণ করে সুযোগ তৈরি করি। পাইথন, এসকিউএল, এবং মেশিন লার্নিং ব্যবহার করে জটিল ডেটাকে বোধগম্য অন্তর্দৃষ্টিতে রূপান্তর করি।",
+                projectsBtn: "প্রজেক্ট দেখুন",
+                contactBtn: "যোগাযোগ করুন",
+
+                // Section Titles
+                aboutTitle: "পরিচিতি",
+                skillsTitle: "প্রযুক্তিগত দক্ষতা",
+                projectsTitle: "প্রজেক্টসমূহ",
+                experienceTitle: "কোর্স এন্ড স্কিল",
+                contactTitle: "যোগাযোগ করুন",
+
+                // Projects
+                project1Title: "বিক্রয় পূর্বাভাস মডেল",
+                project1Desc: "ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২% নির্ভুলতা অর্জন করা হয়েছে।",
+                project2Title: "গ্রাহক সেগমেন্টেশন বিশ্লেষণ",
+                project2Desc: "ক্রয় আচরণের ভিত্তিতে গ্রাহকদের সেগমেন্ট করার জন্য ক্লাস্টারিং অ্যালগরিদম বাস্তবায়ন করা হয়েছে, যা বিপণন রিটার্নে ৩৫% উন্নতি করেছে।",
+                project3Title: "রিয়েল-টাইম ডেটা ড্যাশবোর্ড",
+                project3Desc: "কী ব্যবসায়িক মেট্রিক্স রিয়েল-টাইমে নিরীক্ষণের জন্য একটি ইন্টারেক্টিভ ড্যাশবোর্ড তৈরি করা হয়েছে, যা সিদ্ধান্ত গ্রহণের সময় ৪০% কমিয়েছে।",
+                code1: "কোড",
+                code2: "কোড",
+                code3: "কোড",
+                demo1: "লাইভ ডেমো",
+                demo2: "লাইভ ডেমো",
+                demo3: "লাইভ ডেমো",
+
+                // Experience
+                exp2Title: "জুনিয়র ডেটা অ্যানালিস্ট কোর্স",
+                exp2Date: "২০২৪",
+                exp2Desc: "ওস্তাদ প্ল্যাটফর্ম থেকে ডেটা অ্যানালিটিক্স কোর্স সম্পন্ন করেছি। পাইথন, এসকিউএল এবং মেশিন লার্নিং ব্যবহার করে বাস্তব ডেটা প্রজেক্টে কাজ করার অভিজ্ঞতা অর্জন করেছি।",
+                exp3Title: "ডেটা অ্যানালাইসিস স্পেশালাইজেশন কোর্স",
+                exp3Date: "২০২৪",
+                exp3Desc: "aiQuest Intelligence থেকে ডেটা অ্যানালাইসিস স্পেশালাইজেশন কোরস সম্পন্ন করেছি। ৬টি বাস্তব প্রজেক্ট এর মাধ্যমে ডেটা ক্লিনিং, ভিজ্যুয়ালাইজেশন এবং ব্যবসায়িক কর্মদক্ষতা অর্জন করেছি।",
+
+                // Contact
+                emailTitle: "ইমেইল",
+                phoneTitle: "ফোন",
+                whatsappText: "(হোয়াটসঅ্যাপেও উপলব্ধ)",
+                locationTitle: "অবস্থান",
+                nameLabel: "নাম",
+                emailLabel: "ইমেইল",
+                messageLabel: "বার্তা",
+                submitBtn: "বার্তা পাঠান",
+                sendingText: "পাঠানো হচ্ছে...",
+
+                // Footer
+                footerLogo: "সামির হোসেন মাহিম",
+                copyright: "&copy; ২০২৩ সামির হোসেন মাহিম। সর্বস্বত্ব সংরক্ষিত।",
+
+                // Language Badge
+                currentLanguage: "বাংলা",
+                toggleLanguage: "English",
+
+                // Form Messages
+                successMessage: "ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমি শীঘ্রই আপনার সাথে যোগাযোগ করব।",
+                errorMessage: "দুঃখিত! বার্তা পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
+                networkErrorMessage: "নেটওয়ার্ক ত্রুটি! অনুগ্রহ করে আবার চেষ্টা করুন।"
+            },
+            en: {
+                // Navigation
+                home: "Home",
+                about: "About",
+                skills: "Skills",
+                projects: "Projects",
+                experience: "Experience",
+                contact: "Contact",
+
+                // Hero Section
+                heroTitle: "SAMIR HOSSAIN MAHIM",
+                heroSubtitle: "Creating opportunities through data analysis. Transforming complex data into meaningful insights using Python, SQL, and Machine Learning.",
+                projectsBtn: "View Projects",
+                contactBtn: "Contact Me",
+
+                // Section Titles
+                aboutTitle: "About Me",
+                skillsTitle: "Technical Skills",
+                projectsTitle: "Featured Projects",
+                experienceTitle: "Courses & Skills",
+                contactTitle: "Get In Touch",
+
+                // Projects
+                project1Title: "Sales Forecasting Model",
+                project1Desc: "Developed a machine learning model to predict future sales based on historical data, achieving 92% accuracy.",
+                project2Title: "Customer Segmentation Analysis",
+                project2Desc: "Implemented clustering algorithms to segment customers based on purchasing behavior, improving marketing ROI by 35%.",
+                project3Title: "Real-time Data Dashboard",
+                project3Desc: "Created an interactive dashboard for monitoring key business metrics in real-time, reducing decision-making time by 40%.",
+                code1: "Code",
+                code2: "Code",
+                code3: "Code",
+                demo1: "Live Demo",
+                demo2: "Live Demo",
+                demo3: "Live Demo",
+
+                // Experience
+                exp2Title: "Junior Data Analyst Course",
+                exp2Date: "2024",
+                exp2Desc: "Completed Data Analytics course at Ostad platform. Gained practical experience working on real-world data projects using Python, SQL, and Machine Learning.",
+                exp3Title: "Data Analysis Specialization Course",
+                exp3Date: "2024",
+                exp3Desc: "Completed Data Analysis Specialization at aiQuest Intelligence. Gained skills in data cleaning, visualization, and generating business insights via 6 real-world projects.",
+
+                // Contact
+                emailTitle: "Email",
+                phoneTitle: "Phone",
+                whatsappText: "(Also available on WhatsApp)",
+                locationTitle: "Location",
+                nameLabel: "Name",
+                emailLabel: "Email",
+                messageLabel: "Message",
+                submitBtn: "Send Message",
+                sendingText: "Sending...",
+
+                // Footer
+                footerLogo: "SAMIR HOSSAIN MAHIM",
+                copyright: "&copy; 2023 SAMIR HOSSAIN MAHIM. All Rights Reserved.",
+
+                // Language Badge
+                currentLanguage: "English",
+                toggleLanguage: "বাংলা",
+
+                // Form Messages
+                successMessage: "Thank you! Your message has been sent successfully. I will get back to you soon.",
+                errorMessage: "Sorry! Your message could not be sent. Please try again.",
+                networkErrorMessage: "Network error! Please try again."
+            }
+        };
+
+        // Set initial language from local storage or default to 'en'
+        let currentLang = localStorage.getItem('language') || 'en';
+        const body = document.body;
+
+        // Apply initial class
+        body.classList.add(currentLang);
+
+        // Language Toggle Function
+        function toggleLanguage() {
+            // Remove current language class
+            body.classList.remove(currentLang);
+
+            // Switch language
+            currentLang = currentLang === 'bn' ? 'en' : 'bn';
+
+            // Save to local storage
+            localStorage.setItem('language', currentLang);
+
+            // Add new language class
+            body.classList.add(currentLang);
+
+            // Update all translatable elements
+            updateLanguage(currentLang);
+
+            // Update language badge
+            document.getElementById('currentLanguage').textContent =
+                currentLang === 'bn' ? 'বাংলা' : 'English';
+
+            // Update language toggle button
+            document.querySelector('#languageToggle span').textContent =
+                currentLang === 'bn' ? 'English' : 'বাংলা';
         }
-    };
 
-    // Set initial language
-    let currentLang = 'bn';
-    const body = document.body;
-
-    // Language Toggle Function
-    function toggleLanguage() {
-        currentLang = currentLang === 'bn' ? 'en' : 'bn';
-        body.classList.toggle('bn');
-        body.classList.toggle('en');
-        
         // Update all translatable elements
-        updateLanguage(currentLang);
-        
-        // Update language badge
-        document.getElementById('currentLanguage').textContent = 
-            currentLang === 'bn' ? 'বাংলা' : 'English';
-        
-        // Update language toggle button
-        document.querySelector('#languageToggle span').textContent = 
-            currentLang === 'bn' ? 'English' : 'বাংলা';
-    }
+        function updateLanguage(lang) {
+            const trans = translations[lang];
 
-    // Update all translatable elements
-    function updateLanguage(lang) {
-        const trans = translations[lang];
-        
-        // Update navigation
-        document.querySelectorAll('.nav-link').forEach((link, index) => {
-            const keys = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
-            if (index < keys.length) {
-                link.textContent = trans[keys[index]];
-            }
-        });
-        
-        // Update hero section
-        document.getElementById('heroTitle').textContent = trans.heroTitle;
-        document.getElementById('heroSubtitle').textContent = trans.heroSubtitle;
-        document.getElementById('projectsBtn').textContent = trans.projectsBtn;
-        document.getElementById('contactBtn').textContent = trans.contactBtn;
-        
-        // Update section titles
-        document.getElementById('aboutTitle').textContent = trans.aboutTitle;
-        document.getElementById('skillsTitle').textContent = trans.skillsTitle;
-        document.getElementById('projectsTitle').textContent = trans.projectsTitle;
-        document.getElementById('experienceTitle').textContent = trans.experienceTitle;
-        document.getElementById('contactTitle').textContent = trans.contactTitle;
-        
-        // Update projects
-        document.getElementById('project1Title').textContent = trans.project1Title;
-        document.getElementById('project1Desc').textContent = trans.project1Desc;
-        document.getElementById('project2Title').textContent = trans.project2Title;
-        document.getElementById('project2Desc').textContent = trans.project2Desc;
-        document.getElementById('project3Title').textContent = trans.project3Title;
-        document.getElementById('project3Desc').textContent = trans.project3Desc;
-        document.getElementById('code1').textContent = trans.code1;
-        document.getElementById('code2').textContent = trans.code2;
-        document.getElementById('code3').textContent = trans.code3;
-        document.getElementById('demo1').textContent = trans.demo1;
-        document.getElementById('demo2').textContent = trans.demo2;
-        document.getElementById('demo3').textContent = trans.demo3;
-        
-        // Update experience
-        document.getElementById('exp1Title').textContent = trans.exp1Title;
-        document.getElementById('exp1Date').textContent = trans.exp1Date;
-        document.getElementById('exp1Desc').textContent = trans.exp1Desc;
-        document.getElementById('exp2Title').textContent = trans.exp2Title;
-        document.getElementById('exp2Date').textContent = trans.exp2Date;
-        document.getElementById('exp2Desc').textContent = trans.exp2Desc;
-        document.getElementById('exp3Title').textContent = trans.exp3Title;
-        document.getElementById('exp3Date').textContent = trans.exp3Date;
-        document.getElementById('exp3Desc').textContent = trans.exp3Desc;
-        
-        // Update contact
-        document.getElementById('emailTitle').textContent = trans.emailTitle;
-        document.getElementById('phoneTitle').textContent = trans.phoneTitle;
-        document.getElementById('whatsappText').textContent = trans.whatsappText;
-        document.getElementById('locationTitle').textContent = trans.locationTitle;
-        document.getElementById('nameLabel').textContent = trans.nameLabel;
-        document.getElementById('emailLabel').textContent = trans.emailLabel;
-        document.getElementById('messageLabel').textContent = trans.messageLabel;
-        document.getElementById('submitBtn').textContent = trans.submitBtn;
-        
-        // Update footer
-        document.getElementById('footerLogo').innerHTML = `<i class="fas fa-chart-line"></i> ${trans.footerLogo}`;
-        document.getElementById('copyright').innerHTML = trans.copyright;
-    }
-
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-mode');
-        
-        if (body.classList.contains('light-mode')) {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
-    });
-
-    // Mobile Navigation
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Smooth Scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Skill Progress Animation
-    const skillBars = document.querySelectorAll('.skill-progress-bar');
-    
-    const animateSkills = () => {
-        skillBars.forEach(skillBar => {
-            const skill = skillBar.getAttribute('data-skill');
-            skillBar.style.width = skill + '%';
-        });
-    };
-
-    // Intersection Observers
-    const skillsSection = document.querySelector('.skills');
-    const skillsObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            animateSkills();
-            skillsObserver.unobserve(skillsSection);
-        }
-    }, { threshold: 0.3 });
-
-    skillsObserver.observe(skillsSection);
-
-    // Timeline Animation
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-            }
-        });
-    }, { threshold: 0.3 });
-
-    timelineItems.forEach(item => {
-        timelineObserver.observe(item);
-    });
-
-    // Form Submission with Formspree
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Submit button disable করুন
-        const submitBtn = document.getElementById('submitBtn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = translations[currentLang].sendingText;
-        submitBtn.disabled = true;
-        
-        try {
-            const formData = new FormData(contactForm);
-            
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
+            // Update navigation
+            document.querySelectorAll('.nav-link').forEach((link, index) => {
+                const keys = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+                if (index < keys.length) {
+                    link.textContent = trans[keys[index]];
                 }
             });
-            
-            if (response.ok) {
-                // Success message
-                alert(translations[currentLang].successMessage);
-                contactForm.reset();
+
+            // Update hero section
+            document.getElementById('heroTitle').textContent = trans.heroTitle;
+            document.getElementById('heroSubtitle').textContent = trans.heroSubtitle;
+            document.getElementById('projectsBtn').textContent = trans.projectsBtn;
+            document.getElementById('contactBtn').textContent = trans.contactBtn;
+
+            // Update section titles
+            document.getElementById('aboutTitle').textContent = trans.aboutTitle;
+            document.getElementById('skillsTitle').textContent = trans.skillsTitle;
+            document.getElementById('projectsTitle').textContent = trans.projectsTitle;
+            document.getElementById('experienceTitle').textContent = trans.experienceTitle;
+            document.getElementById('contactTitle').textContent = trans.contactTitle;
+
+            // Update projects
+            document.getElementById('project1Title').textContent = trans.project1Title;
+            document.getElementById('project1Desc').textContent = trans.project1Desc;
+            document.getElementById('project2Title').textContent = trans.project2Title;
+            document.getElementById('project2Desc').textContent = trans.project2Desc;
+            document.getElementById('project3Title').textContent = trans.project3Title;
+            document.getElementById('project3Desc').textContent = trans.project3Desc;
+            document.getElementById('code1').textContent = trans.code1;
+            document.getElementById('code2').textContent = trans.code2;
+            document.getElementById('code3').textContent = trans.code3;
+            document.getElementById('demo1').textContent = trans.demo1;
+            document.getElementById('demo2').textContent = trans.demo2;
+            document.getElementById('demo3').textContent = trans.demo3;
+
+            // Update experience
+            document.getElementById('exp2Title').textContent = trans.exp2Title;
+            document.getElementById('exp2Date').textContent = trans.exp2Date;
+            document.getElementById('exp2Desc').textContent = trans.exp2Desc;
+            document.getElementById('exp3Title').textContent = trans.exp3Title;
+            document.getElementById('exp3Date').textContent = trans.exp3Date;
+            document.getElementById('exp3Desc').textContent = trans.exp3Desc;
+
+            // Update contact
+            document.getElementById('emailTitle').textContent = trans.emailTitle;
+            document.getElementById('phoneTitle').textContent = trans.phoneTitle;
+            document.getElementById('whatsappText').textContent = trans.whatsappText;
+            document.getElementById('locationTitle').textContent = trans.locationTitle;
+            document.getElementById('nameLabel').textContent = trans.nameLabel;
+            document.getElementById('emailLabel').textContent = trans.emailLabel;
+            document.getElementById('messageLabel').textContent = trans.messageLabel;
+            document.getElementById('submitBtn').textContent = trans.submitBtn;
+
+            // Update footer
+            document.getElementById('footerLogo').innerHTML = `<i class="fas fa-chart-line"></i> ${trans.footerLogo}`;
+            document.getElementById('copyright').innerHTML = trans.copyright;
+        }
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+
+            if (body.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
             } else {
-                // Error message
-                alert(translations[currentLang].errorMessage);
-            }
-        } catch (error) {
-            // Network error
-            alert(translations[currentLang].networkErrorMessage);
-        } finally {
-            // Reset button state
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-
-    // Header Background on Scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        
-        if (window.scrollY > 100) {
-            header.style.background = body.classList.contains('light-mode') 
-                ? 'rgba(248, 250, 252, 0.98)' 
-                : 'rgba(15, 23, 42, 0.98)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.background = body.classList.contains('light-mode') 
-                ? 'rgba(248, 250, 252, 0.95)' 
-                : 'rgba(15, 23, 42, 0.95)';
-            header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        }
-    });
-
-    // Language Toggle Event Listeners
-    document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
-    document.getElementById('languageBadge').addEventListener('click', toggleLanguage);
-
-    // Initialize
-    updateLanguage(currentLang);
-    animateSkills();
-    
-    // Add fade-in animation to all sections
-    const sections = document.querySelectorAll('section');
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
             }
         });
-    }, { threshold: 0.1 });
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        sectionObserver.observe(section);
-    });
-</script>
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Skill Progress Animation
+        const skillBars = document.querySelectorAll('.skill-progress-bar');
+
+        const animateSkills = () => {
+            skillBars.forEach(skillBar => {
+                const skill = skillBar.getAttribute('data-skill');
+                skillBar.style.width = skill + '%';
+            });
+        };
+
+        // Intersection Observers
+        const skillsSection = document.querySelector('.skills');
+        const skillsObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateSkills();
+                skillsObserver.unobserve(skillsSection);
+            }
+        }, { threshold: 0.3 });
+
+        skillsObserver.observe(skillsSection);
+
+        // Timeline Animation
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        timelineItems.forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        // Form Submission with Formspree
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Submit button disable করুন
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = translations[currentLang].sendingText;
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(contactForm);
+
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success message
+                    alert(translations[currentLang].successMessage);
+                    contactForm.reset();
+                } else {
+                    // Error message
+                    alert(translations[currentLang].errorMessage);
+                }
+            } catch (error) {
+                // Network error
+                alert(translations[currentLang].networkErrorMessage);
+            } finally {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+
+            if (window.scrollY > 100) {
+                header.style.background = body.classList.contains('light-mode')
+                    ? 'rgba(248, 250, 252, 0.98)'
+                    : 'rgba(15, 23, 42, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = body.classList.contains('light-mode')
+                    ? 'rgba(248, 250, 252, 0.95)'
+                    : 'rgba(15, 23, 42, 0.95)';
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Language Toggle Event Listeners
+        document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
+        document.getElementById('languageBadge').addEventListener('click', toggleLanguage);
+
+        // Initialize
+        updateLanguage(currentLang);
+        animateSkills();
+
+        // Add fade-in animation to all sections
+        const sections = document.querySelectorAll('section');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            sectionObserver.observe(section);
+        });
+    </script>
 </body>
+
 </html>

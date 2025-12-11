@@ -579,23 +579,53 @@
         }
 
         .skill-card {
-            background-color: var(--dark-secondary);
+            background-color: transparent;
+            height: 350px;
+            perspective: 1000px;
+            border-radius: 15px;
+        }
+
+        .skill-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .skill-card:hover .skill-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .skill-card-front,
+        .skill-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
             border-radius: 15px;
             padding: 35px;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            animation: fadeUp 1s ease-out;
         }
 
-        body.light-mode .skill-card {
+        .skill-card-front {
+            background-color: var(--dark-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.light-mode .skill-card-front {
             background-color: var(--light-secondary);
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .skill-card::before {
+        .skill-card-front::before {
             content: '';
             position: absolute;
             top: 0;
@@ -605,9 +635,15 @@
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
 
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+        .skill-card-back {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
         }
 
         .skill-icon {
@@ -626,32 +662,42 @@
         .skill-description {
             margin-bottom: 25px;
             color: var(--text-dark);
+            line-height: 1.6;
         }
 
         body.light-mode .skill-description {
             color: var(--text-light);
         }
 
+        .skill-level {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
         .skill-progress {
-            height: 12px;
-            background-color: var(--dark-tertiary);
-            border-radius: 6px;
+            width: 90%;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
             overflow: hidden;
             position: relative;
         }
 
-        body.light-mode .skill-progress {
-            background-color: var(--light-tertiary);
+        .skill-card-back .skill-progress {
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
         .skill-progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 6px;
+            background: white;
+            border-radius: 10px;
             width: 0;
             transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
 
         .skill-progress-bar::after {
@@ -661,7 +707,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
             animation: shine 2s ease-in-out infinite;
         }
 
@@ -1411,8 +1457,8 @@
                         </div>
                         <div class="profile-info">
                             <h3 id="profileName">Samir Hossain Mahim</h3>
-                            <p id="profileRole">Data Analyst</p>
-                            <p id="profileLoc">Chittagong, Bangladesh</p>
+                            <p id="profileTitle">Data Analyst</p>
+                            <p id="profileLocation">Chittagong, Bangladesh</p>
                             <div class="social-links">
                                 <a href="https://www.facebook.com/share/1DFCTkhDpU"><i class="fab fa-facebook"></i></a>
                                 <a href="https://github.com/developer-samir-hossen"><i class="fab fa-github"></i></a>
@@ -1431,74 +1477,121 @@
             <h2 class="section-title" id="skillsTitle">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="skill-title">Data Analysis</h3>
-                    <p class="skill-description">Skilled in extracting, cleaning, and analyzing information from complex
-                        datasets to identify trends and patterns.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="90"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3 class="skill-title">Python</h3>
-                    <p class="skill-description">Advanced knowledge of Python libraries including Pandas, NumPy,
-                        Matplotlib, and Scikit-learn.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="85"></div>
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill1Title">Data Analysis</h3>
+                            <p class="skill-description" id="skill1Desc">Skilled in extracting, cleaning, and analyzing
+                                information from complex
+                                datasets to identify trends and patterns.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="90"></div>
+                            </div>
+                            <p class="skill-level">Expert Level - 90%</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3 class="skill-title">Data Visualization</h3>
-                    <p class="skill-description">Creating compelling visual representations of data using Tableau, Power
-                        BI, and Python libraries.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="80"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="skill-title">Machine Learning</h3>
-                    <p class="skill-description">Experience in predictive modeling using supervised and unsupervised
-                        learning algorithms.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="75"></div>
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill2Title">Python</h3>
+                            <p class="skill-description" id="skill2Desc">Advanced knowledge of Python libraries
+                                including Pandas, NumPy,
+                                Matplotlib, and Scikit-learn.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="85"></div>
+                            </div>
+                            <p class="skill-level">Expert Level - 85%</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="skill-title">SQL</h3>
-                    <p class="skill-description">Strong knowledge of SQL for data extraction, manipulation, and database
-                        management.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="85"></div>
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill3Title">Data Visualization</h3>
+                            <p class="skill-description" id="skill3Desc">Creating compelling visual representations of
+                                data using Tableau, Power
+                                BI, and Python libraries.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="80"></div>
+                            </div>
+                            <p class="skill-level">Advanced Level - 80%</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill4Title">Machine Learning</h3>
+                            <p class="skill-description" id="skill4Desc">Experience in predictive modeling using
+                                supervised and unsupervised
+                                learning algorithms.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="75"></div>
+                            </div>
+                            <p class="skill-level">Advanced Level - 75%</p>
+                        </div>
                     </div>
-                    <h3 class="skill-title">Statistical Analysis</h3>
-                    <p class="skill-description">Deep understanding of statistical concepts and their application to
-                        real-world data problems.</p>
-                    <div class="skill-progress">
-                        <div class="skill-progress-bar" data-skill="80"></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill5Title">SQL</h3>
+                            <p class="skill-description" id="skill5Desc">Strong knowledge of SQL for data extraction,
+                                manipulation, and database
+                                management.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="85"></div>
+                            </div>
+                            <p class="skill-level">Expert Level - 85%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="skill-title" id="skill6Title">Statistical Analysis</h3>
+                            <p class="skill-description" id="skill6Desc">Deep understanding of statistical concepts and
+                                their application to real-world data problems.</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-skill="80"></div>
+                            </div>
+                            <p class="skill-level">Advanced Level - 80%</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1729,6 +1822,31 @@
                 experienceTitle: "কোর্স এন্ড স্কিল",
                 contactTitle: "যোগাযোগ করুন",
 
+                // About Section
+                aboutDesc1: "আসসালামু আলাইকুম! আমি সামির হোসেন মাহিম, একজন আগ্রহী ডেটা অ্যানালিস্ট। পরিসংখ্যানগত বিশ্লেষণ, ডেটা ভিজ্যুয়ালাইজেশন, এবং মেশিন লার্নিং-এ আমার দক্ষতা রয়েছে। আমি জটিল ডেটাসেট থেকে অর্থপূর্ণ তথ্য উদ্ধার করে ব্যবসায়িক সিদ্ধান্ত গ্রহণে সহায়তা করি।",
+                aboutDesc2: "আমার কাজের পদ্ধতিতে প্রযুক্তিগত দক্ষতা এবং ব্যবসায়িক বোধের সমন্বয় ঘটে, যা ডেটা সায়েন্স এবং বাস্তব প্রয়োগের মধ্যে সেতুবন্ধন তৈরি করে। প্রেডিক্টিভ মডেল তৈরি, ইন্টারেক্টিভ ড্যাশবোর্ড ডিজাইন, বা গভীর পরিসংখ্যানগত বিশ্লেষণ - যেকোনো চ্যালেঞ্জ গ্রহণে আমি সবসময় উৎসাহী।",
+                stat1: "প্রজেক্ট সম্পন্ন",
+                stat2: "বছরের অভিজ্ঞতা",
+                stat3: "ক্লায়েন্ট সন্তুষ্টি",
+                stat4: "ডেটা নির্ভুলতা",
+                profileName: "সামির হোসেন মাহিম",
+                profileTitle: "ডেটা অ্যানালিস্ট",
+                profileLocation: "চট্টগ্রাম, বাংলাদেশ",
+
+                // Skills
+                skill1Title: "ডেটা বিশ্লেষণ",
+                skill1Desc: "জটিল ডেটাসেট থেকে তথ্য আহরণ, পরিষ্কারকরণ এবং বিশ্লেষণ করে ট্রেন্ড ও প্যাটার্ন শনাক্তকরণে দক্ষ।",
+                skill2Title: "পাইথন",
+                skill2Desc: "পান্ডাস, নামপাই, ম্যাটপ্লটলিব, এবং স্কিকিট-লার্ন সহ পাইথন লাইব্রেরিতে উন্নত জ্ঞান।",
+                skill3Title: "ডেটা ভিজ্যুয়ালাইজেশন",
+                skill3Desc: "টেবলু, পাওয়ার বিআই, এবং পাইথন লাইব্রেরি ব্যবহার করে ডেটার আকর্ষণীয় ভিজ্যুয়াল উপস্থাপনা তৈরি।",
+                skill4Title: "মেশিন লার্নিং",
+                skill4Desc: "সুপারভাইজড এবং আনসুপারভাইজড লার্নিং অ্যালগরিদম ব্যবহার করে প্রেডিক্টিভ মডেলিং অভিজ্ঞতা।",
+                skill5Title: "এসকিউএল",
+                skill5Desc: "ডেটা এক্সট্রাকশন, ম্যানিপুলেশন এবং ডেটাবেস ম্যানেজমেন্টের জন্য এসকিউএলের শক্তিশালী জ্ঞান।",
+                skill6Title: "পরিসংখ্যানগত বিশ্লেষণ",
+                skill6Desc: "পরিসংখ্যানগত ধারণা এবং বাস্তব-বিশ্বের ডেটা সমস্যায় তাদের প্রয়োগের গভীর বোধগম্যতা।",
+
                 // Projects
                 project1Title: "বিক্রয় পূর্বাভাস মডেল",
                 project1Desc: "ঐতিহাসিক ডেটার উপর ভিত্তি করে ভবিষ্যতের বিক্রয়ের পূর্বাভাস দেওয়ার জন্য একটি মেশিন লার্নিং মডেল তৈরি করা হয়েছে, যেখানে ৯২% নির্ভুলতা অর্জন করা হয়েছে।",
@@ -1796,6 +1914,31 @@
                 projectsTitle: "Featured Projects",
                 experienceTitle: "Courses & Skills",
                 contactTitle: "Get In Touch",
+
+                // About Section
+                aboutDesc1: "Hello! I am Samir Hossain Mahim, a passionate Data Analyst. I have expertise in statistical analysis, data visualization, and machine learning. I help in business decision-making by extracting meaningful information from complex datasets.",
+                aboutDesc2: "My work approach combines technical skills with business acumen, creating a bridge between data science and real-world application. Whether building predictive models, designing interactive dashboards, or conducting deep statistical analysis - I am always enthusiastic about taking on any challenge.",
+                stat1: "Projects Completed",
+                stat2: "Years Experience",
+                stat3: "Client Satisfaction",
+                stat4: "Data Accuracy",
+                profileName: "Samir Hossain Mahim",
+                profileTitle: "Data Analyst",
+                profileLocation: "Chittagong, Bangladesh",
+
+                // Skills
+                skill1Title: "Data Analysis",
+                skill1Desc: "Skilled in extracting, cleaning, and analyzing information from complex datasets to identify trends and patterns.",
+                skill2Title: "Python",
+                skill2Desc: "Advanced knowledge of Python libraries including Pandas, NumPy, Matplotlib, and Scikit-learn.",
+                skill3Title: "Data Visualization",
+                skill3Desc: "Creating compelling visual representations of data using Tableau, Power BI, and Python libraries.",
+                skill4Title: "Machine Learning",
+                skill4Desc: "Experience in predictive modeling using supervised and unsupervised learning algorithms.",
+                skill5Title: "SQL",
+                skill5Desc: "Strong knowledge of SQL for data extraction, manipulation, and database management.",
+                skill6Title: "Statistical Analysis",
+                skill6Desc: "Deep understanding of statistical concepts and their application to real-world data problems.",
 
                 // Projects
                 project1Title: "Sales Forecasting Model",
@@ -1902,6 +2045,31 @@
             document.getElementById('projectsTitle').textContent = trans.projectsTitle;
             document.getElementById('experienceTitle').textContent = trans.experienceTitle;
             document.getElementById('contactTitle').textContent = trans.contactTitle;
+
+            // Update About section
+            document.getElementById('aboutDesc1').innerHTML = trans.aboutDesc1.replace('Samir Hossain Mahim', '<span class="highlight">Samir Hossain Mahim</span>');
+            document.getElementById('aboutDesc2').textContent = trans.aboutDesc2;
+            document.getElementById('stat1').textContent = trans.stat1;
+            document.getElementById('stat2').textContent = trans.stat2;
+            document.getElementById('stat3').textContent = trans.stat3;
+            document.getElementById('stat4').textContent = trans.stat4;
+            document.getElementById('profileName').textContent = trans.profileName;
+            document.getElementById('profileTitle').textContent = trans.profileTitle;
+            document.getElementById('profileLocation').textContent = trans.profileLocation;
+
+            // Update Skills
+            document.getElementById('skill1Title').textContent = trans.skill1Title;
+            document.getElementById('skill1Desc').textContent = trans.skill1Desc;
+            document.getElementById('skill2Title').textContent = trans.skill2Title;
+            document.getElementById('skill2Desc').textContent = trans.skill2Desc;
+            document.getElementById('skill3Title').textContent = trans.skill3Title;
+            document.getElementById('skill3Desc').textContent = trans.skill3Desc;
+            document.getElementById('skill4Title').textContent = trans.skill4Title;
+            document.getElementById('skill4Desc').textContent = trans.skill4Desc;
+            document.getElementById('skill5Title').textContent = trans.skill5Title;
+            document.getElementById('skill5Desc').textContent = trans.skill5Desc;
+            document.getElementById('skill6Title').textContent = trans.skill6Title;
+            document.getElementById('skill6Desc').textContent = trans.skill6Desc;
 
             // Update projects
             document.getElementById('project1Title').textContent = trans.project1Title;
